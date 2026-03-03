@@ -1,0 +1,26 @@
+@startuml
+left to right direction
+
+actor "Gestionnaire" as Gestionnaire
+actor "Centre de congrès" as Centre
+
+rectangle "Système" {
+  usecase "Statistiques" as UC_Stats
+  usecase "Création des tarifs" as UC_Tarifs
+  usecase "Création des disponibilités" as UC_Dispo
+  usecase "Création de réservation" as UC_Resa
+  
+  
+  
+}
+
+' Liens Gestionnaire (les 4)
+Gestionnaire -- UC_Resa
+Gestionnaire -- UC_Dispo
+Gestionnaire -- UC_Tarifs
+Gestionnaire -- UC_Stats
+
+' Liens Centre de congrès (2 uniquement)
+Centre -- UC_Resa
+Centre -- UC_Dispo
+@enduml
