@@ -1,0 +1,1245 @@
+{
+  "project": {
+    "id": "fbcffc6d-e005-4cfb-a3de-fea65f6a55fd",
+    "type": "Project",
+    "name": "Bmo",
+    "description": "New project",
+    "owner": "User",
+    "createdAt": "2026-03-03T14:03:38.326Z",
+    "currentDiagramType": "ClassDiagram",
+    "diagrams": {
+      "ClassDiagram": {
+        "id": "00080760-838c-4353-9cc6-5c4f1831e3d4",
+        "title": "Class Diagram",
+        "model": {
+          "version": "3.0.0",
+          "type": "ClassDiagram",
+          "size": {
+            "width": 1760,
+            "height": 900
+          },
+          "interactive": {
+            "elements": {},
+            "relationships": {}
+          },
+          "elements": {
+            "0bc5654a-f648-46c7-8481-e5dedd651d84": {
+              "id": "0bc5654a-f648-46c7-8481-e5dedd651d84",
+              "name": "Reservation",
+              "type": "Class",
+              "owner": null,
+              "bounds": {
+                "x": -370,
+                "y": -130,
+                "width": 270,
+                "height": 160
+              },
+              "attributes": [
+                "191a5121-9a8f-4c88-b759-58e2136d6e3f",
+                "9b773b60-ff4f-499c-b3e1-8c9a9eb100b2",
+                "464bc3e9-a866-420d-a960-20785b1acd6c",
+                "b138ac84-0e58-4618-9e8f-66ac60ece07f"
+              ],
+              "methods": []
+            },
+            "191a5121-9a8f-4c88-b759-58e2136d6e3f": {
+              "id": "191a5121-9a8f-4c88-b759-58e2136d6e3f",
+              "name": "dateDebut",
+              "type": "ClassAttribute",
+              "owner": "0bc5654a-f648-46c7-8481-e5dedd651d84",
+              "bounds": {
+                "x": -369.5,
+                "y": -89.5,
+                "width": 269,
+                "height": 30
+              },
+              "code": "",
+              "visibility": "public",
+              "attributeType": "date",
+              "implementationType": "none",
+              "stateMachineId": "",
+              "quantumCircuitId": "",
+              "isOptional": false
+            },
+            "9b773b60-ff4f-499c-b3e1-8c9a9eb100b2": {
+              "id": "9b773b60-ff4f-499c-b3e1-8c9a9eb100b2",
+              "name": "dateFin",
+              "type": "ClassAttribute",
+              "owner": "0bc5654a-f648-46c7-8481-e5dedd651d84",
+              "bounds": {
+                "x": -369.5,
+                "y": -59.5,
+                "width": 269,
+                "height": 30
+              },
+              "code": "",
+              "visibility": "public",
+              "attributeType": "date",
+              "implementationType": "none",
+              "stateMachineId": "",
+              "quantumCircuitId": "",
+              "isOptional": false
+            },
+            "464bc3e9-a866-420d-a960-20785b1acd6c": {
+              "id": "464bc3e9-a866-420d-a960-20785b1acd6c",
+              "name": "estConfirmer",
+              "type": "ClassAttribute",
+              "owner": "0bc5654a-f648-46c7-8481-e5dedd651d84",
+              "bounds": {
+                "x": -369.5,
+                "y": -29.5,
+                "width": 269,
+                "height": 30
+              },
+              "code": "",
+              "visibility": "public",
+              "attributeType": "bool",
+              "implementationType": "none",
+              "stateMachineId": "",
+              "quantumCircuitId": "",
+              "isOptional": false
+            },
+            "b138ac84-0e58-4618-9e8f-66ac60ece07f": {
+              "id": "b138ac84-0e58-4618-9e8f-66ac60ece07f",
+              "name": "dateLimiteConfirmation",
+              "type": "ClassAttribute",
+              "owner": "0bc5654a-f648-46c7-8481-e5dedd651d84",
+              "bounds": {
+                "x": -369.5,
+                "y": 0.5,
+                "width": 269,
+                "height": 30
+              },
+              "code": "",
+              "visibility": "public",
+              "attributeType": "datetime",
+              "implementationType": "none",
+              "stateMachineId": "",
+              "quantumCircuitId": "",
+              "isOptional": false
+            },
+            "ad0e1c7d-0e22-4354-b614-92fe0b6bbe69": {
+              "id": "ad0e1c7d-0e22-4354-b614-92fe0b6bbe69",
+              "name": "Salle",
+              "type": "Class",
+              "owner": null,
+              "bounds": {
+                "x": -370,
+                "y": -430,
+                "width": 160,
+                "height": 160
+              },
+              "attributes": [
+                "f23b00ce-a833-4fc8-b258-bed2dcb85c6d",
+                "77475261-9b19-49eb-a5ac-b767f2de2753",
+                "f7d5e178-ce65-42ce-9b51-aa51d7c1bb11",
+                "b179949d-eff3-418b-8015-ecd561a8bcba"
+              ],
+              "methods": []
+            },
+            "f23b00ce-a833-4fc8-b258-bed2dcb85c6d": {
+              "id": "f23b00ce-a833-4fc8-b258-bed2dcb85c6d",
+              "name": "nom",
+              "type": "ClassAttribute",
+              "owner": "ad0e1c7d-0e22-4354-b614-92fe0b6bbe69",
+              "bounds": {
+                "x": -369.5,
+                "y": -389.5,
+                "width": 159,
+                "height": 30
+              },
+              "code": "",
+              "visibility": "public",
+              "attributeType": "str",
+              "implementationType": "none",
+              "stateMachineId": "",
+              "quantumCircuitId": "",
+              "isOptional": false
+            },
+            "77475261-9b19-49eb-a5ac-b767f2de2753": {
+              "id": "77475261-9b19-49eb-a5ac-b767f2de2753",
+              "name": "type",
+              "type": "ClassAttribute",
+              "owner": "ad0e1c7d-0e22-4354-b614-92fe0b6bbe69",
+              "bounds": {
+                "x": -369.5,
+                "y": -359.5,
+                "width": 159,
+                "height": 30
+              },
+              "code": "",
+              "visibility": "public",
+              "attributeType": "str",
+              "implementationType": "none",
+              "stateMachineId": "",
+              "quantumCircuitId": "",
+              "isOptional": false
+            },
+            "f7d5e178-ce65-42ce-9b51-aa51d7c1bb11": {
+              "id": "f7d5e178-ce65-42ce-9b51-aa51d7c1bb11",
+              "name": "capacite",
+              "type": "ClassAttribute",
+              "owner": "ad0e1c7d-0e22-4354-b614-92fe0b6bbe69",
+              "bounds": {
+                "x": -369.5,
+                "y": -329.5,
+                "width": 159,
+                "height": 30
+              },
+              "code": "",
+              "visibility": "public",
+              "attributeType": "int",
+              "implementationType": "none",
+              "stateMachineId": "",
+              "quantumCircuitId": "",
+              "isOptional": false
+            },
+            "b179949d-eff3-418b-8015-ecd561a8bcba": {
+              "id": "b179949d-eff3-418b-8015-ecd561a8bcba",
+              "name": "prixBase",
+              "type": "ClassAttribute",
+              "owner": "ad0e1c7d-0e22-4354-b614-92fe0b6bbe69",
+              "bounds": {
+                "x": -369.5,
+                "y": -299.5,
+                "width": 159,
+                "height": 30
+              },
+              "code": "",
+              "visibility": "public",
+              "attributeType": "int",
+              "implementationType": "none",
+              "stateMachineId": "",
+              "quantumCircuitId": "",
+              "isOptional": false
+            },
+            "b31cacdd-d1da-42a0-9fc5-919059188167": {
+              "id": "b31cacdd-d1da-42a0-9fc5-919059188167",
+              "name": "CentreCongres",
+              "type": "Class",
+              "owner": null,
+              "bounds": {
+                "x": 60,
+                "y": -410,
+                "width": 160,
+                "height": 100
+              },
+              "attributes": [
+                "13d4e97b-2627-4855-b924-9b2f81f0cc9e",
+                "5a3db978-49ff-457f-838c-70e5569e2bff"
+              ],
+              "methods": []
+            },
+            "13d4e97b-2627-4855-b924-9b2f81f0cc9e": {
+              "id": "13d4e97b-2627-4855-b924-9b2f81f0cc9e",
+              "name": "nom",
+              "type": "ClassAttribute",
+              "owner": "b31cacdd-d1da-42a0-9fc5-919059188167",
+              "bounds": {
+                "x": 60.5,
+                "y": -369.5,
+                "width": 159,
+                "height": 30
+              },
+              "code": "",
+              "visibility": "public",
+              "attributeType": "str",
+              "implementationType": "none",
+              "stateMachineId": "",
+              "quantumCircuitId": "",
+              "isOptional": false
+            },
+            "5a3db978-49ff-457f-838c-70e5569e2bff": {
+              "id": "5a3db978-49ff-457f-838c-70e5569e2bff",
+              "name": "adresse",
+              "type": "ClassAttribute",
+              "owner": "b31cacdd-d1da-42a0-9fc5-919059188167",
+              "bounds": {
+                "x": 60.5,
+                "y": -339.5,
+                "width": 159,
+                "height": 30
+              },
+              "code": "",
+              "visibility": "public",
+              "attributeType": "str",
+              "implementationType": "none",
+              "stateMachineId": "",
+              "quantumCircuitId": "",
+              "isOptional": false
+            },
+            "b691118d-2f4f-4098-969b-8032ac993bc4": {
+              "id": "b691118d-2f4f-4098-969b-8032ac993bc4",
+              "name": "Gestionnaire",
+              "type": "Class",
+              "owner": null,
+              "bounds": {
+                "x": 20,
+                "y": -80,
+                "width": 160,
+                "height": 70
+              },
+              "attributes": [
+                "eb022386-cd84-46af-8f78-f23954df2f52"
+              ],
+              "methods": []
+            },
+            "eb022386-cd84-46af-8f78-f23954df2f52": {
+              "id": "eb022386-cd84-46af-8f78-f23954df2f52",
+              "name": "attribute",
+              "type": "ClassAttribute",
+              "owner": "b691118d-2f4f-4098-969b-8032ac993bc4",
+              "bounds": {
+                "x": 20.5,
+                "y": -39.5,
+                "width": 159,
+                "height": 30
+              },
+              "code": "",
+              "visibility": "public",
+              "attributeType": "str",
+              "implementationType": "none",
+              "stateMachineId": "",
+              "quantumCircuitId": "",
+              "isOptional": false
+            },
+            "aab12259-a717-4947-8312-72e7ae9172c3": {
+              "id": "aab12259-a717-4947-8312-72e7ae9172c3",
+              "name": "Evenement",
+              "type": "Class",
+              "owner": null,
+              "bounds": {
+                "x": -360,
+                "y": 120,
+                "width": 160,
+                "height": 190
+              },
+              "attributes": [
+                "7eb44a06-135d-409f-b685-b4bc85097627",
+                "46ba5ff6-1e70-4394-b116-9dd9b50b624e",
+                "b998876e-30c3-4ed6-9f68-e52c6778b2ad",
+                "7d976213-e101-44a6-94ad-2963682dd285",
+                "5e3dfc42-d152-4137-838f-06fbffed66bc"
+              ],
+              "methods": []
+            },
+            "7eb44a06-135d-409f-b685-b4bc85097627": {
+              "id": "7eb44a06-135d-409f-b685-b4bc85097627",
+              "name": "nom",
+              "type": "ClassAttribute",
+              "owner": "aab12259-a717-4947-8312-72e7ae9172c3",
+              "bounds": {
+                "x": -359.5,
+                "y": 160.5,
+                "width": 159,
+                "height": 30
+              },
+              "code": "",
+              "visibility": "public",
+              "attributeType": "str",
+              "implementationType": "none",
+              "stateMachineId": "",
+              "quantumCircuitId": "",
+              "isOptional": false
+            },
+            "46ba5ff6-1e70-4394-b116-9dd9b50b624e": {
+              "id": "46ba5ff6-1e70-4394-b116-9dd9b50b624e",
+              "name": "description",
+              "type": "ClassAttribute",
+              "owner": "aab12259-a717-4947-8312-72e7ae9172c3",
+              "bounds": {
+                "x": -359.5,
+                "y": 190.5,
+                "width": 159,
+                "height": 30
+              },
+              "code": "",
+              "visibility": "public",
+              "attributeType": "str",
+              "implementationType": "none",
+              "stateMachineId": "",
+              "quantumCircuitId": "",
+              "isOptional": false
+            },
+            "b998876e-30c3-4ed6-9f68-e52c6778b2ad": {
+              "id": "b998876e-30c3-4ed6-9f68-e52c6778b2ad",
+              "name": "nbParticipants",
+              "type": "ClassAttribute",
+              "owner": "aab12259-a717-4947-8312-72e7ae9172c3",
+              "bounds": {
+                "x": -359.5,
+                "y": 220.5,
+                "width": 159,
+                "height": 30
+              },
+              "code": "",
+              "visibility": "public",
+              "attributeType": "int",
+              "implementationType": "none",
+              "stateMachineId": "",
+              "quantumCircuitId": "",
+              "isOptional": false
+            },
+            "7d976213-e101-44a6-94ad-2963682dd285": {
+              "id": "7d976213-e101-44a6-94ad-2963682dd285",
+              "name": "emailreferent",
+              "type": "ClassAttribute",
+              "owner": "aab12259-a717-4947-8312-72e7ae9172c3",
+              "bounds": {
+                "x": -359.5,
+                "y": 250.5,
+                "width": 159,
+                "height": 30
+              },
+              "code": "",
+              "visibility": "public",
+              "attributeType": "str",
+              "implementationType": "none",
+              "stateMachineId": "",
+              "quantumCircuitId": "",
+              "isOptional": false
+            },
+            "5e3dfc42-d152-4137-838f-06fbffed66bc": {
+              "id": "5e3dfc42-d152-4137-838f-06fbffed66bc",
+              "name": "statistique",
+              "type": "ClassAttribute",
+              "owner": "aab12259-a717-4947-8312-72e7ae9172c3",
+              "bounds": {
+                "x": -359.5,
+                "y": 280.5,
+                "width": 159,
+                "height": 30
+              },
+              "code": "",
+              "visibility": "public",
+              "attributeType": "str",
+              "implementationType": "none",
+              "stateMachineId": "",
+              "quantumCircuitId": "",
+              "isOptional": false
+            },
+            "f3f0ad35-3a96-491a-9c9e-449bf977888f": {
+              "id": "f3f0ad35-3a96-491a-9c9e-449bf977888f",
+              "name": "Ressource",
+              "type": "AbstractClass",
+              "owner": null,
+              "bounds": {
+                "x": -680,
+                "y": -120,
+                "width": 160,
+                "height": 170
+              },
+              "attributes": [
+                "e0aea7af-056c-4562-9b48-6753749ac6a8",
+                "9b657bdb-f886-46f0-ad07-d981f905ebe8",
+                "f788e882-f0f7-4bd4-87bf-6ba90e55744c",
+                "51f4567f-a285-41a4-9dcd-b4d555b68d34"
+              ],
+              "methods": []
+            },
+            "e0aea7af-056c-4562-9b48-6753749ac6a8": {
+              "id": "e0aea7af-056c-4562-9b48-6753749ac6a8",
+              "name": "nom",
+              "type": "ClassAttribute",
+              "owner": "f3f0ad35-3a96-491a-9c9e-449bf977888f",
+              "bounds": {
+                "x": -679.5,
+                "y": -69.5,
+                "width": 159,
+                "height": 30
+              },
+              "code": "",
+              "visibility": "public",
+              "attributeType": "str",
+              "implementationType": "none",
+              "stateMachineId": "",
+              "quantumCircuitId": "",
+              "isOptional": false
+            },
+            "9b657bdb-f886-46f0-ad07-d981f905ebe8": {
+              "id": "9b657bdb-f886-46f0-ad07-d981f905ebe8",
+              "name": "type",
+              "type": "ClassAttribute",
+              "owner": "f3f0ad35-3a96-491a-9c9e-449bf977888f",
+              "bounds": {
+                "x": -679.5,
+                "y": -39.5,
+                "width": 159,
+                "height": 30
+              },
+              "code": "",
+              "visibility": "public",
+              "attributeType": "str",
+              "implementationType": "none",
+              "stateMachineId": "",
+              "quantumCircuitId": "",
+              "isOptional": false
+            },
+            "f788e882-f0f7-4bd4-87bf-6ba90e55744c": {
+              "id": "f788e882-f0f7-4bd4-87bf-6ba90e55744c",
+              "name": "prix",
+              "type": "ClassAttribute",
+              "owner": "f3f0ad35-3a96-491a-9c9e-449bf977888f",
+              "bounds": {
+                "x": -679.5,
+                "y": -9.5,
+                "width": 159,
+                "height": 30
+              },
+              "code": "",
+              "visibility": "public",
+              "attributeType": "int",
+              "implementationType": "none",
+              "stateMachineId": "",
+              "quantumCircuitId": "",
+              "isOptional": false
+            },
+            "51f4567f-a285-41a4-9dcd-b4d555b68d34": {
+              "id": "51f4567f-a285-41a4-9dcd-b4d555b68d34",
+              "name": "stockMax",
+              "type": "ClassAttribute",
+              "owner": "f3f0ad35-3a96-491a-9c9e-449bf977888f",
+              "bounds": {
+                "x": -679.5,
+                "y": 20.5,
+                "width": 159,
+                "height": 30
+              },
+              "code": "",
+              "visibility": "public",
+              "attributeType": "int",
+              "implementationType": "none",
+              "stateMachineId": "",
+              "quantumCircuitId": "",
+              "isOptional": false
+            },
+            "7e70c443-965a-440f-9f8b-1a9e0d6b3664": {
+              "id": "7e70c443-965a-440f-9f8b-1a9e0d6b3664",
+              "name": "Materiel",
+              "type": "Class",
+              "owner": null,
+              "bounds": {
+                "x": -860,
+                "y": 180,
+                "width": 160,
+                "height": 70
+              },
+              "attributes": [
+                "6743c704-870b-4312-b771-98123eb9b549"
+              ],
+              "methods": []
+            },
+            "6743c704-870b-4312-b771-98123eb9b549": {
+              "id": "6743c704-870b-4312-b771-98123eb9b549",
+              "name": "nom",
+              "type": "ClassAttribute",
+              "owner": "7e70c443-965a-440f-9f8b-1a9e0d6b3664",
+              "bounds": {
+                "x": -859.5,
+                "y": 220.5,
+                "width": 159,
+                "height": 30
+              },
+              "code": "",
+              "visibility": "public",
+              "attributeType": "str",
+              "implementationType": "none",
+              "stateMachineId": "",
+              "quantumCircuitId": "",
+              "isOptional": false
+            },
+            "fbac6ee8-8f5f-49e0-9587-3271b95069c7": {
+              "id": "fbac6ee8-8f5f-49e0-9587-3271b95069c7",
+              "name": "Prestation",
+              "type": "Class",
+              "owner": null,
+              "bounds": {
+                "x": -580,
+                "y": 160,
+                "width": 160,
+                "height": 70
+              },
+              "attributes": [
+                "9b6b8e49-d949-4f73-8566-4be23e50282f"
+              ],
+              "methods": []
+            },
+            "9b6b8e49-d949-4f73-8566-4be23e50282f": {
+              "id": "9b6b8e49-d949-4f73-8566-4be23e50282f",
+              "name": "nom",
+              "type": "ClassAttribute",
+              "owner": "fbac6ee8-8f5f-49e0-9587-3271b95069c7",
+              "bounds": {
+                "x": -579.5,
+                "y": 200.5,
+                "width": 159,
+                "height": 30
+              },
+              "code": "",
+              "visibility": "public",
+              "attributeType": "str",
+              "implementationType": "none",
+              "stateMachineId": "",
+              "quantumCircuitId": "",
+              "isOptional": false
+            },
+            "b4d8b18e-d410-4c9a-ae72-3c030b8ce3c2": {
+              "id": "b4d8b18e-d410-4c9a-ae72-3c030b8ce3c2",
+              "name": "Tarif",
+              "type": "Class",
+              "owner": null,
+              "bounds": {
+                "x": -690,
+                "y": -410,
+                "width": 230,
+                "height": 190
+              },
+              "attributes": [
+                "5aa6b820-c4ae-4ff6-976a-2a9004fdcf44",
+                "a6f71041-74a2-40c8-bffa-30564e3daf5f",
+                "66128a06-9496-45a6-9e1b-4eed366cb6fa",
+                "708e978c-8e49-42f2-a3a7-3d726af827ce",
+                "2e116290-f06e-4930-bcbb-3d011448f8bf"
+              ],
+              "methods": []
+            },
+            "5aa6b820-c4ae-4ff6-976a-2a9004fdcf44": {
+              "id": "5aa6b820-c4ae-4ff6-976a-2a9004fdcf44",
+              "name": "nomSaison",
+              "type": "ClassAttribute",
+              "owner": "b4d8b18e-d410-4c9a-ae72-3c030b8ce3c2",
+              "bounds": {
+                "x": -689.5,
+                "y": -369.5,
+                "width": 229,
+                "height": 30
+              },
+              "code": "",
+              "visibility": "public",
+              "attributeType": "str",
+              "implementationType": "none",
+              "stateMachineId": "",
+              "quantumCircuitId": "",
+              "isOptional": false
+            },
+            "a6f71041-74a2-40c8-bffa-30564e3daf5f": {
+              "id": "a6f71041-74a2-40c8-bffa-30564e3daf5f",
+              "name": "prixUnitaire",
+              "type": "ClassAttribute",
+              "owner": "b4d8b18e-d410-4c9a-ae72-3c030b8ce3c2",
+              "bounds": {
+                "x": -689.5,
+                "y": -339.5,
+                "width": 229,
+                "height": 30
+              },
+              "code": "",
+              "visibility": "public",
+              "attributeType": "int",
+              "implementationType": "none",
+              "stateMachineId": "",
+              "quantumCircuitId": "",
+              "isOptional": false
+            },
+            "66128a06-9496-45a6-9e1b-4eed366cb6fa": {
+              "id": "66128a06-9496-45a6-9e1b-4eed366cb6fa",
+              "name": "unite",
+              "type": "ClassAttribute",
+              "owner": "b4d8b18e-d410-4c9a-ae72-3c030b8ce3c2",
+              "bounds": {
+                "x": -689.5,
+                "y": -309.5,
+                "width": 229,
+                "height": 30
+              },
+              "code": "",
+              "visibility": "public",
+              "attributeType": "str",
+              "implementationType": "none",
+              "stateMachineId": "",
+              "quantumCircuitId": "",
+              "isOptional": false
+            },
+            "708e978c-8e49-42f2-a3a7-3d726af827ce": {
+              "id": "708e978c-8e49-42f2-a3a7-3d726af827ce",
+              "name": "dateDebutSaison",
+              "type": "ClassAttribute",
+              "owner": "b4d8b18e-d410-4c9a-ae72-3c030b8ce3c2",
+              "bounds": {
+                "x": -689.5,
+                "y": -279.5,
+                "width": 229,
+                "height": 30
+              },
+              "code": "",
+              "visibility": "public",
+              "attributeType": "date",
+              "implementationType": "none",
+              "stateMachineId": "",
+              "quantumCircuitId": "",
+              "isOptional": false
+            },
+            "2e116290-f06e-4930-bcbb-3d011448f8bf": {
+              "id": "2e116290-f06e-4930-bcbb-3d011448f8bf",
+              "name": "dateFinSaison",
+              "type": "ClassAttribute",
+              "owner": "b4d8b18e-d410-4c9a-ae72-3c030b8ce3c2",
+              "bounds": {
+                "x": -689.5,
+                "y": -249.5,
+                "width": 229,
+                "height": 30
+              },
+              "code": "",
+              "visibility": "public",
+              "attributeType": "date",
+              "implementationType": "none",
+              "stateMachineId": "",
+              "quantumCircuitId": "",
+              "isOptional": false
+            }
+          },
+          "relationships": {
+            "745c1c3e-34e5-4547-bec3-6c894405c76c": {
+              "id": "745c1c3e-34e5-4547-bec3-6c894405c76c",
+              "name": "",
+              "type": "ClassBidirectional",
+              "owner": null,
+              "bounds": {
+                "x": 115,
+                "y": -310,
+                "width": 32.25,
+                "height": 239
+              },
+              "path": [
+                {
+                  "x": 5,
+                  "y": 230
+                },
+                {
+                  "x": 5,
+                  "y": 0
+                }
+              ],
+              "source": {
+                "direction": "Up",
+                "element": "b691118d-2f4f-4098-969b-8032ac993bc4",
+                "multiplicity": "1.n",
+                "role": ""
+              },
+              "target": {
+                "direction": "Down",
+                "element": "b31cacdd-d1da-42a0-9fc5-919059188167",
+                "multiplicity": "1.1",
+                "role": ""
+              },
+              "isManuallyLayouted": false
+            },
+            "277521f7-a9fa-4be6-ab69-02ad38a3e88e": {
+              "id": "277521f7-a9fa-4be6-ab69-02ad38a3e88e",
+              "name": "",
+              "type": "ClassBidirectional",
+              "owner": null,
+              "bounds": {
+                "x": -210,
+                "y": -370,
+                "width": 270,
+                "height": 48
+              },
+              "path": [
+                {
+                  "x": 270,
+                  "y": 10
+                },
+                {
+                  "x": 0,
+                  "y": 10
+                }
+              ],
+              "source": {
+                "direction": "Left",
+                "element": "b31cacdd-d1da-42a0-9fc5-919059188167",
+                "multiplicity": "1.1",
+                "role": ""
+              },
+              "target": {
+                "direction": "Downright",
+                "element": "ad0e1c7d-0e22-4354-b614-92fe0b6bbe69",
+                "multiplicity": "1.n",
+                "role": ""
+              },
+              "isManuallyLayouted": false
+            },
+            "be04485a-ec50-46b0-88ac-eaff8d3cd5ef": {
+              "id": "be04485a-ec50-46b0-88ac-eaff8d3cd5ef",
+              "name": "",
+              "type": "ClassBidirectional",
+              "owner": null,
+              "bounds": {
+                "x": -285,
+                "y": 30,
+                "width": 32.25,
+                "height": 99
+              },
+              "path": [
+                {
+                  "x": 5,
+                  "y": 90
+                },
+                {
+                  "x": 5,
+                  "y": 0
+                }
+              ],
+              "source": {
+                "direction": "Up",
+                "element": "aab12259-a717-4947-8312-72e7ae9172c3",
+                "multiplicity": "1.1",
+                "role": ""
+              },
+              "target": {
+                "direction": "Down",
+                "element": "0bc5654a-f648-46c7-8481-e5dedd651d84",
+                "multiplicity": "1.1",
+                "role": ""
+              },
+              "isManuallyLayouted": false
+            },
+            "ff583d3b-9b43-42af-902e-c3845bb5ae35": {
+              "id": "ff583d3b-9b43-42af-902e-c3845bb5ae35",
+              "name": "",
+              "type": "ClassBidirectional",
+              "owner": null,
+              "bounds": {
+                "x": -200,
+                "y": -10,
+                "width": 327.25,
+                "height": 263
+              },
+              "path": [
+                {
+                  "x": 0,
+                  "y": 225
+                },
+                {
+                  "x": 300,
+                  "y": 225
+                },
+                {
+                  "x": 300,
+                  "y": 0
+                }
+              ],
+              "source": {
+                "direction": "Right",
+                "element": "aab12259-a717-4947-8312-72e7ae9172c3",
+                "multiplicity": "1.1",
+                "role": ""
+              },
+              "target": {
+                "direction": "Down",
+                "element": "b691118d-2f4f-4098-969b-8032ac993bc4",
+                "multiplicity": "1.n",
+                "role": ""
+              },
+              "isManuallyLayouted": false
+            },
+            "facd78ea-0617-4f2b-b9aa-79fa67b2cd05": {
+              "id": "facd78ea-0617-4f2b-b9aa-79fa67b2cd05",
+              "name": "",
+              "type": "ClassBidirectional",
+              "owner": null,
+              "bounds": {
+                "x": -520,
+                "y": -55,
+                "width": 150,
+                "height": 48
+              },
+              "path": [
+                {
+                  "x": 0,
+                  "y": 10
+                },
+                {
+                  "x": 150,
+                  "y": 10
+                }
+              ],
+              "source": {
+                "direction": "Right",
+                "element": "f3f0ad35-3a96-491a-9c9e-449bf977888f",
+                "multiplicity": "0.n",
+                "role": ""
+              },
+              "target": {
+                "direction": "Left",
+                "element": "0bc5654a-f648-46c7-8481-e5dedd651d84",
+                "multiplicity": "0.1",
+                "role": ""
+              },
+              "isManuallyLayouted": false
+            },
+            "03983f8b-04b6-4632-8d48-6f116ee9622d": {
+              "id": "03983f8b-04b6-4632-8d48-6f116ee9622d",
+              "name": "",
+              "type": "ClassBidirectional",
+              "owner": null,
+              "bounds": {
+                "x": -295,
+                "y": -270,
+                "width": 32.25,
+                "height": 149
+              },
+              "path": [
+                {
+                  "x": 5,
+                  "y": 140
+                },
+                {
+                  "x": 5,
+                  "y": 0
+                }
+              ],
+              "source": {
+                "direction": "Up",
+                "element": "0bc5654a-f648-46c7-8481-e5dedd651d84",
+                "multiplicity": "0.1",
+                "role": ""
+              },
+              "target": {
+                "direction": "Down",
+                "element": "ad0e1c7d-0e22-4354-b614-92fe0b6bbe69",
+                "multiplicity": "1.n",
+                "role": ""
+              },
+              "isManuallyLayouted": false
+            },
+            "44f541df-947c-4ff6-aeba-673903eb76fe": {
+              "id": "44f541df-947c-4ff6-aeba-673903eb76fe",
+              "name": "",
+              "type": "ClassBidirectional",
+              "owner": null,
+              "bounds": {
+                "x": -100,
+                "y": -55,
+                "width": 120,
+                "height": 48
+              },
+              "path": [
+                {
+                  "x": 0,
+                  "y": 10
+                },
+                {
+                  "x": 120,
+                  "y": 10
+                }
+              ],
+              "source": {
+                "direction": "Right",
+                "element": "0bc5654a-f648-46c7-8481-e5dedd651d84",
+                "multiplicity": "0.n",
+                "role": ""
+              },
+              "target": {
+                "direction": "Left",
+                "element": "b691118d-2f4f-4098-969b-8032ac993bc4",
+                "multiplicity": "1.1",
+                "role": ""
+              },
+              "isManuallyLayouted": false
+            },
+            "f335765e-e733-4447-8de0-013107b431b4": {
+              "id": "f335765e-e733-4447-8de0-013107b431b4",
+              "name": "",
+              "type": "ClassInheritance",
+              "owner": null,
+              "bounds": {
+                "x": -555,
+                "y": 50,
+                "width": 10,
+                "height": 110
+              },
+              "path": [
+                {
+                  "x": 5,
+                  "y": 110
+                },
+                {
+                  "x": 5,
+                  "y": 0
+                }
+              ],
+              "source": {
+                "direction": "Up",
+                "element": "fbac6ee8-8f5f-49e0-9587-3271b95069c7",
+                "multiplicity": "",
+                "role": ""
+              },
+              "target": {
+                "direction": "Down",
+                "element": "f3f0ad35-3a96-491a-9c9e-449bf977888f",
+                "multiplicity": "",
+                "role": ""
+              },
+              "isManuallyLayouted": false
+            },
+            "9d9685a2-d774-4d6b-a3f7-3009e212c0e9": {
+              "id": "9d9685a2-d774-4d6b-a3f7-3009e212c0e9",
+              "name": "",
+              "type": "ClassInheritance",
+              "owner": null,
+              "bounds": {
+                "x": -785,
+                "y": -87.5,
+                "width": 105,
+                "height": 267.5
+              },
+              "path": [
+                {
+                  "x": 5,
+                  "y": 267.5
+                },
+                {
+                  "x": 5,
+                  "y": 10
+                },
+                {
+                  "x": 105,
+                  "y": 10
+                }
+              ],
+              "source": {
+                "direction": "Up",
+                "element": "7e70c443-965a-440f-9f8b-1a9e0d6b3664",
+                "multiplicity": "",
+                "role": ""
+              },
+              "target": {
+                "direction": "Upleft",
+                "element": "f3f0ad35-3a96-491a-9c9e-449bf977888f",
+                "multiplicity": "",
+                "role": ""
+              },
+              "isManuallyLayouted": false
+            },
+            "7dd37103-1a5d-434d-96ff-69e16325873d": {
+              "id": "7dd37103-1a5d-434d-96ff-69e16325873d",
+              "name": "",
+              "type": "ClassBidirectional",
+              "owner": null,
+              "bounds": {
+                "x": -605,
+                "y": -220,
+                "width": 32.25,
+                "height": 109
+              },
+              "path": [
+                {
+                  "x": 5,
+                  "y": 0
+                },
+                {
+                  "x": 5,
+                  "y": 100
+                }
+              ],
+              "source": {
+                "direction": "Down",
+                "element": "b4d8b18e-d410-4c9a-ae72-3c030b8ce3c2",
+                "multiplicity": "1.1",
+                "role": ""
+              },
+              "target": {
+                "direction": "Up",
+                "element": "f3f0ad35-3a96-491a-9c9e-449bf977888f",
+                "multiplicity": "1.n",
+                "role": ""
+              },
+              "isManuallyLayouted": false
+            },
+            "fc2ff416-c517-4faf-9237-bcd6ad7692d0": {
+              "id": "fc2ff416-c517-4faf-9237-bcd6ad7692d0",
+              "name": "",
+              "type": "ClassBidirectional",
+              "owner": null,
+              "bounds": {
+                "x": -460,
+                "y": -277.5,
+                "width": 90,
+                "height": 225.5
+              },
+              "path": [
+                {
+                  "x": 0,
+                  "y": 10
+                },
+                {
+                  "x": 45,
+                  "y": 10
+                },
+                {
+                  "x": 45,
+                  "y": 187.5
+                },
+                {
+                  "x": 90,
+                  "y": 187.5
+                }
+              ],
+              "source": {
+                "direction": "Downright",
+                "element": "b4d8b18e-d410-4c9a-ae72-3c030b8ce3c2",
+                "multiplicity": "1.1",
+                "role": ""
+              },
+              "target": {
+                "direction": "Upleft",
+                "element": "0bc5654a-f648-46c7-8481-e5dedd651d84",
+                "multiplicity": "0.n",
+                "role": ""
+              },
+              "isManuallyLayouted": false
+            },
+            "d6149d18-9dfc-4003-9042-bc02b397bc8a": {
+              "id": "d6149d18-9dfc-4003-9042-bc02b397bc8a",
+              "name": "",
+              "type": "ClassBidirectional",
+              "owner": null,
+              "bounds": {
+                "x": -460,
+                "y": -350,
+                "width": 90,
+                "height": 48
+              },
+              "path": [
+                {
+                  "x": 0,
+                  "y": 10
+                },
+                {
+                  "x": 90,
+                  "y": 10
+                }
+              ],
+              "source": {
+                "direction": "Right",
+                "element": "b4d8b18e-d410-4c9a-ae72-3c030b8ce3c2",
+                "multiplicity": "1.1",
+                "role": ""
+              },
+              "target": {
+                "direction": "Left",
+                "element": "ad0e1c7d-0e22-4354-b614-92fe0b6bbe69",
+                "multiplicity": "0.n",
+                "role": ""
+              },
+              "isManuallyLayouted": false
+            }
+          },
+          "assessments": {}
+        },
+        "lastUpdate": "2026-03-03T15:16:17.558Z"
+      },
+      "ObjectDiagram": {
+        "id": "51a12cb6-0993-4b94-9ed7-d3937776822f",
+        "title": "Object Diagram",
+        "model": {
+          "version": "3.0.0",
+          "type": "ObjectDiagram",
+          "size": {
+            "width": 1400,
+            "height": 740
+          },
+          "elements": {},
+          "relationships": {},
+          "interactive": {
+            "elements": {},
+            "relationships": {}
+          },
+          "assessments": {}
+        },
+        "lastUpdate": "2026-03-03T14:03:38.326Z"
+      },
+      "StateMachineDiagram": {
+        "id": "c5e61455-fed0-4f38-a95f-0b8a6373e2c6",
+        "title": "State Machine Diagram",
+        "model": {
+          "version": "3.0.0",
+          "type": "StateMachineDiagram",
+          "size": {
+            "width": 1400,
+            "height": 740
+          },
+          "elements": {},
+          "relationships": {},
+          "interactive": {
+            "elements": {},
+            "relationships": {}
+          },
+          "assessments": {}
+        },
+        "lastUpdate": "2026-03-03T14:03:38.326Z"
+      },
+      "AgentDiagram": {
+        "id": "f3b844de-b8bb-4c78-973c-f9dc48b36239",
+        "title": "Agent Diagram",
+        "model": {
+          "version": "3.0.0",
+          "type": "AgentDiagram",
+          "size": {
+            "width": 1400,
+            "height": 740
+          },
+          "elements": {},
+          "relationships": {},
+          "interactive": {
+            "elements": {},
+            "relationships": {}
+          },
+          "assessments": {}
+        },
+        "lastUpdate": "2026-03-03T14:03:38.326Z"
+      },
+      "UserDiagram": {
+        "id": "04544767-dc8e-4a73-8437-46ce68f40d67",
+        "title": "User Diagram",
+        "model": {
+          "version": "3.0.0",
+          "type": "UserDiagram",
+          "size": {
+            "width": 1400,
+            "height": 740
+          },
+          "elements": {},
+          "relationships": {},
+          "interactive": {
+            "elements": {},
+            "relationships": {}
+          },
+          "assessments": {}
+        },
+        "lastUpdate": "2026-03-03T14:03:38.326Z"
+      },
+      "QuantumCircuitDiagram": {
+        "id": "eb7ea416-54ea-4c38-87f8-9958ca5caf53",
+        "title": "Quantum Circuit",
+        "model": {
+          "cols": [],
+          "gates": [],
+          "gateMetadata": {},
+          "initialStates": [],
+          "version": "1.0.0"
+        },
+        "lastUpdate": "2026-03-03T14:03:38.326Z"
+      }
+    },
+    "settings": {
+      "defaultDiagramType": "ClassDiagram",
+      "autoSave": true,
+      "collaborationEnabled": false
+    }
+  },
+  "exportedAt": "2026-03-03T15:17:24.153Z",
+  "version": "2.0.0"
+}
