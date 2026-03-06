@@ -1,0 +1,14 @@
+@startuml
+title UC2 — Confirmer une réservation (nominal)
+
+actor Gestionnaire as G
+participant "Système Gestion Centres\n(CentreCongresApp)" as S
+
+G -> S : confirmerReservation(reservationId)
+activate S
+S -> S : chargerReservation(reservationId)
+S -> S : estDansDelaiConfirmation()
+S -> S : confirmer()
+S --> G : confirmationOK(statut="CONFIRMEE")
+deactivate S
+@enduml

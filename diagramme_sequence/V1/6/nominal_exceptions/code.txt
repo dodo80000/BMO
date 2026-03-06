@@ -1,0 +1,15 @@
+@startuml
+title UC6 — Consulter des statistiques (nominal)
+
+actor Gestionnaire as G
+participant "Système Gestion Centres\n(CentreCongresApp)" as S
+
+G -> S : consulterStatistiques(centreId,\n periodeType: {"MOIS","ANNEE"},\n debut: Date, fin: Date)
+activate S
+S -> S : chargerReservationsPassees(centreId, debut, fin)
+S -> S : calculerChiffreAffaires(periodeType)
+S -> S : calculerTauxOccupation(periodeType)
+S -> S : calculerUtilisationRessources(periodeType)
+S --> G : statistiques( CA, tauxOccupation, utilisationRessources )
+deactivate S
+@enduml

@@ -1,0 +1,22 @@
+@startuml
+title UC3 — Modifier une réservation (exceptions)
+
+actor Gestionnaire as G
+participant "Système Gestion Centres\n(CentreCongresApp)" as S
+
+G -> S : modifierReservation(reservationId, nouvelleDateDebut: Date, nouvelleDateFin: Date, nouvellesRessources)
+activate S
+
+alt Réservation non modifiable (événement commencé)
+  S -> S : estModifiable()
+  S --> G : erreur("Reservation non modifiable : événement déjà commencé")
+else Nouvelle période indisponible
+  S -> S : verifierDisponibilite(...)
+  S --> G : erreur("Salle indisponible sur la nouvelle période")
+else Ressource indisponible
+  S -> S : verifierRessources(...)
+  S --> G : erreur("Ressource indisponible / stock insuffisant")
+end
+
+deactivate S
+@enduml

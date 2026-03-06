@@ -1,0 +1,21 @@
+@startuml
+title UC5 — Définir un tarif (nominal + exceptions)
+
+actor Gestionnaire as G
+participant "Système Gestion Centres\n(CentreCongresApp)" as S
+
+G -> S : definirTarif(salleId,\n nomSaison: str, prixUnitaire: float, unite: str,\n dateDebutSaison: Date, dateFinSaison: Date)
+activate S
+
+alt Période invalide
+  S --> G : erreur("dateDebutSaison doit être avant dateFinSaison")
+else Conflit de saison / chevauchement
+  S --> G : erreur("Tarif en conflit avec une saison existante")
+else OK
+  S -> S : creerTarif(...)
+  S -> S : associerTarif(salleId, tarifId)
+  S --> G : tarifCree(tarifId)
+end
+
+deactivate S
+@enduml

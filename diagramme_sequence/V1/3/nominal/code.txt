@@ -1,0 +1,19 @@
+@startuml
+title UC3 — Modifier une réservation (nominal)
+
+actor Gestionnaire as G
+participant "Système Gestion Centres\n(CentreCongresApp)" as S
+
+G -> S : modifierReservation(reservationId,\n nouvelleDateDebut: Date, nouvelleDateFin: Date,\n nouvellesRessources)
+activate S
+
+S -> S : chargerReservation(reservationId)
+S -> S : estModifiable()
+S -> S : verifierDisponibilite(salleId, nouvelleDateDebut, nouvelleDateFin)
+S -> S : verifierRessources(nouvellesRessources, nouvelleDateDebut, nouvelleDateFin)
+S -> S : modifierDates(nouvelleDateDebut, nouvelleDateFin)
+S -> S : recalculerCoutTotal()
+
+S --> G : modificationOK(nouveauCoutTotal)
+deactivate S
+@enduml

@@ -1,0 +1,22 @@
+@startuml
+title UC2 — Confirmer une réservation (exceptions)
+
+actor Gestionnaire as G
+participant "Système Gestion Centres\n(CentreCongresApp)" as S
+
+G -> S : confirmerReservation(reservationId)
+activate S
+
+alt Réservation introuvable
+  S --> G : erreur("Reservation inconnue")
+else Déjà confirmée
+  S --> G : erreur("Reservation déjà confirmée")
+else Annulée
+  S --> G : erreur("Reservation annulée")
+else Hors délai
+  S -> S : estDansDelaiConfirmation()
+  S --> G : erreur("Délai de confirmation dépassé")
+end
+
+deactivate S
+@enduml

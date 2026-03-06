@@ -1,0 +1,21 @@
+@startuml
+title UC4 — Annuler une réservation (nominal + exceptions)
+
+actor Gestionnaire as G
+participant "Système Gestion Centres\n(CentreCongresApp)" as S
+
+G -> S : annulerReservation(reservationId)
+activate S
+
+S -> S : chargerReservation(reservationId)
+
+alt Événement déjà commencé
+  S -> S : estModifiable()
+  S --> G : erreur("Annulation impossible : événement déjà commencé")
+else OK
+  S -> S : annuler()
+  S --> G : annulationOK(statut="ANNULEE")
+end
+
+deactivate S
+@enduml

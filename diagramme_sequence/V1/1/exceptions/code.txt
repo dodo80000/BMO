@@ -1,0 +1,24 @@
+@startuml
+title UC1 — Créer une réservation (exceptions)
+
+actor Gestionnaire as G
+participant "Système Gestion Centres\n(CentreCongresApp)" as S
+
+G -> S : creerReservation(dateDebut: Date, dateFin: Date,\n salleId, evenementInfos,\n ressourcesChoisies, dateLimiteConfirmation: DateTime)
+activate S
+
+alt Salle indisponible
+  S -> S : verifierDisponibilite(...)
+  S --> G : erreur("Salle indisponible sur la période")
+else Capacité insuffisante
+  S -> S : verifierCapacite(...)
+  S --> G : erreur("Capacité insuffisante")
+else Ressource non disponible / stock insuffisant
+  S -> S : verifierRessources(...)
+  S --> G : erreur("Ressource indisponible ou stock insuffisant")
+else Dates invalides
+  S --> G : erreur("dateDebut doit être avant dateFin")
+end
+
+deactivate S
+@enduml

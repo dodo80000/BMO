@@ -1,0 +1,20 @@
+@startuml
+title UC1 — Créer une réservation (nominal)
+
+actor Gestionnaire as G
+participant "Système Gestion Centres\n(CentreCongresApp)" as S
+
+G -> S : consulterDisponibilites(centreId, salleId, dateDebut: Date, dateFin: Date)
+S --> G : disponibilites(ok)
+
+G -> S : creerReservation(dateDebut: Date, dateFin: Date,\n salleId, evenementInfos,\n ressourcesChoisies, dateLimiteConfirmation: DateTime)
+
+activate S
+S -> S : verifierDisponibilite(salleId, dateDebut, dateFin)
+S -> S : verifierCapacite(salleId, nbParticipants)
+S -> S : verifierRessources(ressourcesChoisies, dateDebut, dateFin)
+S -> S : calculerCoutTotal(salleId, ressourcesChoisies, dateDebut, dateFin)
+
+S --> G : reservationCreee(reservationId,\n statut="EN_ATTENTE", coutTotal,\n dateLimiteConfirmation)
+deactivate S
+@enduml
