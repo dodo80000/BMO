@@ -1,0 +1,32 @@
+@startuml
+title Diagramme d'état — Reservation
+
+skinparam shadowing false
+skinparam state {
+  BackgroundColor white
+  BorderColor black
+}
+
+[*] --> EnAttenteConfirmation : creerReservation()
+
+EnAttenteConfirmation --> Confirmee : confirmer()\n[estDansDelaiConfirmation()]
+EnAttenteConfirmation --> Expiree : delaiDepasse()\n[!estDansDelaiConfirmation()]
+EnAttenteConfirmation --> Annulee : annuler()\n[decisionGestionnaire]
+
+Expiree --> Annulee : annuler()\n[decisionGestionnaire]
+
+Confirmee --> Confirmee : modifierDates(nouvelleDateDebut, nouvelleDateFin)\n[estModifiable()]
+Confirmee --> Annulee : annuler()\n[estModifiable()]
+
+Confirmee --> EnCours : debutEvenement()\n[dateCourante >= dateDebut]
+EnCours --> Terminee : finEvenement()\n[dateCourante > dateFin]
+
+' Sécurité : actions refusées si trop tard
+EnCours --> EnCours : modifierDates(...)\n/refuser("non modifiable")
+EnCours --> EnCours : annuler()\n/refuser("non annulable")
+Terminee --> Terminee : modifierDates(...)\n/refuser("non modifiable")
+Terminee --> Terminee : annuler()\n/refuser("non annulable")
+
+Annulee --> [*]
+Terminee --> [*]
+@enduml
