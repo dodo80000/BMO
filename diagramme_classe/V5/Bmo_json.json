@@ -1,0 +1,1954 @@
+{
+  "project": {
+    "id": "project_1773305046779_6xgwt1d7n",
+    "type": "Project",
+    "name": "Bmo",
+    "description": "New project",
+    "owner": "User",
+    "createdAt": "2026-03-12T08:44:06.779Z",
+    "currentDiagramType": "ClassDiagram",
+    "diagrams": {
+      "ClassDiagram": {
+        "id": "00080760-838c-4353-9cc6-5c4f1831e3d4",
+        "title": "Class Diagram",
+        "model": {
+          "version": "3.0.0",
+          "type": "ClassDiagram",
+          "size": {
+            "width": 2740,
+            "height": 1500
+          },
+          "interactive": {
+            "elements": {},
+            "relationships": {}
+          },
+          "elements": {
+            "0bc5654a-f648-46c7-8481-e5dedd651d84": {
+              "id": "0bc5654a-f648-46c7-8481-e5dedd651d84",
+              "name": "Reservation",
+              "type": "Class",
+              "owner": null,
+              "bounds": {
+                "x": -330,
+                "y": -190,
+                "width": 420,
+                "height": 430
+              },
+              "attributes": [
+                "191a5121-9a8f-4c88-b759-58e2136d6e3f",
+                "9b773b60-ff4f-499c-b3e1-8c9a9eb100b2",
+                "464bc3e9-a866-420d-a960-20785b1acd6c",
+                "b138ac84-0e58-4618-9e8f-66ac60ece07f"
+              ],
+              "methods": [
+                "64284bb8-3e2b-464a-8a01-8b845c9da297",
+                "9d06a8f2-d61b-4438-89fb-c9ac8f84bbe6",
+                "8d57ae57-503f-4058-bdd7-3f239cf6f45a",
+                "06dd5427-9da9-42e1-bdd4-3dc4cff1d45c",
+                "6c388a89-87dc-4e1e-af08-a5e3b350a98f",
+                "decb064a-77c8-4370-a14b-f0d079c8809d",
+                "7c0450c7-d77a-4610-a01b-2656e4f20b75",
+                "7b52367e-60b5-486f-81fe-633419eef0eb",
+                "1f93e8f8-0b66-4c07-927b-b074f9ba2617"
+              ]
+            },
+            "191a5121-9a8f-4c88-b759-58e2136d6e3f": {
+              "id": "191a5121-9a8f-4c88-b759-58e2136d6e3f",
+              "name": "dateDebut",
+              "type": "ClassAttribute",
+              "owner": "0bc5654a-f648-46c7-8481-e5dedd651d84",
+              "bounds": {
+                "x": -329.5,
+                "y": -149.5,
+                "width": 419,
+                "height": 30
+              },
+              "code": "",
+              "visibility": "public",
+              "attributeType": "date",
+              "implementationType": "none",
+              "stateMachineId": "",
+              "quantumCircuitId": "",
+              "isOptional": false
+            },
+            "9b773b60-ff4f-499c-b3e1-8c9a9eb100b2": {
+              "id": "9b773b60-ff4f-499c-b3e1-8c9a9eb100b2",
+              "name": "dateFin",
+              "type": "ClassAttribute",
+              "owner": "0bc5654a-f648-46c7-8481-e5dedd651d84",
+              "bounds": {
+                "x": -329.5,
+                "y": -119.5,
+                "width": 419,
+                "height": 30
+              },
+              "code": "",
+              "visibility": "public",
+              "attributeType": "date",
+              "implementationType": "none",
+              "stateMachineId": "",
+              "quantumCircuitId": "",
+              "isOptional": false
+            },
+            "464bc3e9-a866-420d-a960-20785b1acd6c": {
+              "id": "464bc3e9-a866-420d-a960-20785b1acd6c",
+              "name": "estConfirmer",
+              "type": "ClassAttribute",
+              "owner": "0bc5654a-f648-46c7-8481-e5dedd651d84",
+              "bounds": {
+                "x": -329.5,
+                "y": -89.5,
+                "width": 419,
+                "height": 30
+              },
+              "code": "",
+              "visibility": "public",
+              "attributeType": "bool",
+              "implementationType": "none",
+              "stateMachineId": "",
+              "quantumCircuitId": "",
+              "isOptional": false
+            },
+            "b138ac84-0e58-4618-9e8f-66ac60ece07f": {
+              "id": "b138ac84-0e58-4618-9e8f-66ac60ece07f",
+              "name": "dateLimiteConfirmation",
+              "type": "ClassAttribute",
+              "owner": "0bc5654a-f648-46c7-8481-e5dedd651d84",
+              "bounds": {
+                "x": -329.5,
+                "y": -59.5,
+                "width": 419,
+                "height": 30
+              },
+              "code": "",
+              "visibility": "public",
+              "attributeType": "datetime",
+              "implementationType": "none",
+              "stateMachineId": "",
+              "quantumCircuitId": "",
+              "isOptional": false
+            },
+            "64284bb8-3e2b-464a-8a01-8b845c9da297": {
+              "id": "64284bb8-3e2b-464a-8a01-8b845c9da297",
+              "name": "+ confirmer()",
+              "type": "ClassMethod",
+              "owner": "0bc5654a-f648-46c7-8481-e5dedd651d84",
+              "bounds": {
+                "x": -329.5,
+                "y": -29.5,
+                "width": 419,
+                "height": 30
+              },
+              "code": "def confirmer(self):\n    \"\"\"Confirme la réservation si le délai de confirmation est respecté.\"\"\"\n    if self.estDansDelaiConfirmation():\n        self.estConfirmer = True\n    else:\n        raise Exception(\"Le délai de confirmation est dépassé\")",
+              "visibility": "public",
+              "attributeType": "str",
+              "implementationType": "code",
+              "stateMachineId": "",
+              "quantumCircuitId": "",
+              "isOptional": false
+            },
+            "9d06a8f2-d61b-4438-89fb-c9ac8f84bbe6": {
+              "id": "9d06a8f2-d61b-4438-89fb-c9ac8f84bbe6",
+              "name": "+ annuler()",
+              "type": "ClassMethod",
+              "owner": "0bc5654a-f648-46c7-8481-e5dedd651d84",
+              "bounds": {
+                "x": -329.5,
+                "y": 0.5,
+                "width": 419,
+                "height": 30
+              },
+              "code": "def annuler(self):\n    \"\"\"Annule la réservation.\"\"\"\n    from datetime import datetime\n\n    if datetime.now().date() < self.dateDebut:\n        self.estConfirmer = False\n    else:\n        raise Exception(\"Impossible d'annuler une réservation déjà commencée\")",
+              "visibility": "public",
+              "attributeType": "str",
+              "implementationType": "code",
+              "stateMachineId": "",
+              "quantumCircuitId": "",
+              "isOptional": false
+            },
+            "8d57ae57-503f-4058-bdd7-3f239cf6f45a": {
+              "id": "8d57ae57-503f-4058-bdd7-3f239cf6f45a",
+              "name": "+ modifierDates(dateDebut, dateFin)",
+              "type": "ClassMethod",
+              "owner": "0bc5654a-f648-46c7-8481-e5dedd651d84",
+              "bounds": {
+                "x": -329.5,
+                "y": 30.5,
+                "width": 419,
+                "height": 30
+              },
+              "code": "def modifierDates(self, dateDebut, dateFin):\n    \"\"\"Modifie les dates de réservation.\"\"\"\n\n    if not self.estModifiable():\n        raise Exception(\"La réservation ne peut plus être modifiée\")\n\n    if not self.salle.estDisponible(dateDebut, dateFin):\n        raise Exception(\"La salle n'est pas disponible\")\n\n    self.dateDebut = dateDebut\n    self.dateFin = dateFin",
+              "visibility": "public",
+              "attributeType": "str",
+              "implementationType": "code",
+              "stateMachineId": "",
+              "quantumCircuitId": "",
+              "isOptional": false
+            },
+            "06dd5427-9da9-42e1-bdd4-3dc4cff1d45c": {
+              "id": "06dd5427-9da9-42e1-bdd4-3dc4cff1d45c",
+              "name": "+ estConfirmee()",
+              "type": "ClassMethod",
+              "owner": "0bc5654a-f648-46c7-8481-e5dedd651d84",
+              "bounds": {
+                "x": -329.5,
+                "y": 60.5,
+                "width": 419,
+                "height": 30
+              },
+              "code": "def estConfirmee(self):\n    \"\"\"Retourne True si la réservation est confirmée.\"\"\"\n    return self.estConfirmer",
+              "visibility": "public",
+              "attributeType": "str",
+              "implementationType": "code",
+              "stateMachineId": "",
+              "quantumCircuitId": "",
+              "isOptional": false
+            },
+            "6c388a89-87dc-4e1e-af08-a5e3b350a98f": {
+              "id": "6c388a89-87dc-4e1e-af08-a5e3b350a98f",
+              "name": "+ estModifiable()",
+              "type": "ClassMethod",
+              "owner": "0bc5654a-f648-46c7-8481-e5dedd651d84",
+              "bounds": {
+                "x": -329.5,
+                "y": 90.5,
+                "width": 419,
+                "height": 30
+              },
+              "code": "def estModifiable(self):\n    \"\"\"Vérifie si la réservation peut être modifiée.\"\"\"\n    from datetime import datetime\n    return datetime.now().date() < self.dateDebut",
+              "visibility": "public",
+              "attributeType": "str",
+              "implementationType": "code",
+              "stateMachineId": "",
+              "quantumCircuitId": "",
+              "isOptional": false
+            },
+            "decb064a-77c8-4370-a14b-f0d079c8809d": {
+              "id": "decb064a-77c8-4370-a14b-f0d079c8809d",
+              "name": "+ calculerCoutTotal()",
+              "type": "ClassMethod",
+              "owner": "0bc5654a-f648-46c7-8481-e5dedd651d84",
+              "bounds": {
+                "x": -329.5,
+                "y": 120.5,
+                "width": 419,
+                "height": 30
+              },
+              "code": "def calculerCoutTotal(self):\n    \"\"\"Calcule le coût total de la réservation.\"\"\"\n\n    duree = (self.dateFin - self.dateDebut).days\n    cout = self.salle.prixBase * duree\n\n    for materiel in self.materiels:\n        cout += materiel.prix\n\n    for prestation in self.prestations:\n        cout += prestation.prix\n\n    return cout",
+              "visibility": "public",
+              "attributeType": "str",
+              "implementationType": "code",
+              "stateMachineId": "",
+              "quantumCircuitId": "",
+              "isOptional": false
+            },
+            "7c0450c7-d77a-4610-a01b-2656e4f20b75": {
+              "id": "7c0450c7-d77a-4610-a01b-2656e4f20b75",
+              "name": "+ estDansDelaiConfirmation()",
+              "type": "ClassMethod",
+              "owner": "0bc5654a-f648-46c7-8481-e5dedd651d84",
+              "bounds": {
+                "x": -329.5,
+                "y": 150.5,
+                "width": 419,
+                "height": 30
+              },
+              "code": "def estDansDelaiConfirmation(self):\n    \"\"\"Vérifie si la confirmation est encore possible.\"\"\"\n    from datetime import datetime\n    return datetime.now() <= self.dateLimiteConfirmation",
+              "visibility": "public",
+              "attributeType": "str",
+              "implementationType": "code",
+              "stateMachineId": "",
+              "quantumCircuitId": "",
+              "isOptional": false
+            },
+            "7b52367e-60b5-486f-81fe-633419eef0eb": {
+              "id": "7b52367e-60b5-486f-81fe-633419eef0eb",
+              "name": "+ verifierDisponibilite()",
+              "type": "ClassMethod",
+              "owner": "0bc5654a-f648-46c7-8481-e5dedd651d84",
+              "bounds": {
+                "x": -329.5,
+                "y": 180.5,
+                "width": 419,
+                "height": 30
+              },
+              "code": "def verifierDisponibilite(self):\n    \"\"\"Vérifie si la salle est disponible.\"\"\"\n    return self.salle.estDisponible(self.dateDebut, self.dateFin)",
+              "visibility": "public",
+              "attributeType": "str",
+              "implementationType": "code",
+              "stateMachineId": "",
+              "quantumCircuitId": "",
+              "isOptional": false
+            },
+            "1f93e8f8-0b66-4c07-927b-b074f9ba2617": {
+              "id": "1f93e8f8-0b66-4c07-927b-b074f9ba2617",
+              "name": "+ Reservation(dateDebut: date, dateFin: date, dateLimiteConfirmation: datetime, evenement: Evenement, salle: Salle)",
+              "type": "ClassMethod",
+              "owner": "0bc5654a-f648-46c7-8481-e5dedd651d84",
+              "bounds": {
+                "x": -329.5,
+                "y": 210.5,
+                "width": 419,
+                "height": 30
+              },
+              "code": "",
+              "visibility": "public",
+              "attributeType": "str",
+              "implementationType": "none",
+              "stateMachineId": "",
+              "quantumCircuitId": "",
+              "isOptional": false
+            },
+            "ad0e1c7d-0e22-4354-b614-92fe0b6bbe69": {
+              "id": "ad0e1c7d-0e22-4354-b614-92fe0b6bbe69",
+              "name": "Salle",
+              "type": "Class",
+              "owner": null,
+              "bounds": {
+                "x": -380,
+                "y": -560,
+                "width": 420,
+                "height": 310
+              },
+              "attributes": [
+                "f23b00ce-a833-4fc8-b258-bed2dcb85c6d",
+                "77475261-9b19-49eb-a5ac-b767f2de2753",
+                "f7d5e178-ce65-42ce-9b51-aa51d7c1bb11",
+                "b179949d-eff3-418b-8015-ecd561a8bcba"
+              ],
+              "methods": [
+                "30864310-05bc-4139-9976-77bfe73c25d6",
+                "4b660fe6-203f-444d-b54c-82e74f77bd51",
+                "e72e81ae-7444-4bbb-ac02-c3619d5d16b7",
+                "fda76faf-e698-4bb1-ba36-e071b04a343c",
+                "c23d8198-2b7f-4916-b57c-16fc873deb31"
+              ]
+            },
+            "f23b00ce-a833-4fc8-b258-bed2dcb85c6d": {
+              "id": "f23b00ce-a833-4fc8-b258-bed2dcb85c6d",
+              "name": "nom",
+              "type": "ClassAttribute",
+              "owner": "ad0e1c7d-0e22-4354-b614-92fe0b6bbe69",
+              "bounds": {
+                "x": -379.5,
+                "y": -519.5,
+                "width": 419,
+                "height": 30
+              },
+              "code": "",
+              "visibility": "public",
+              "attributeType": "str",
+              "implementationType": "none",
+              "stateMachineId": "",
+              "quantumCircuitId": "",
+              "isOptional": false
+            },
+            "77475261-9b19-49eb-a5ac-b767f2de2753": {
+              "id": "77475261-9b19-49eb-a5ac-b767f2de2753",
+              "name": "type",
+              "type": "ClassAttribute",
+              "owner": "ad0e1c7d-0e22-4354-b614-92fe0b6bbe69",
+              "bounds": {
+                "x": -379.5,
+                "y": -489.5,
+                "width": 419,
+                "height": 30
+              },
+              "code": "",
+              "visibility": "public",
+              "attributeType": "str",
+              "implementationType": "none",
+              "stateMachineId": "",
+              "quantumCircuitId": "",
+              "isOptional": false
+            },
+            "f7d5e178-ce65-42ce-9b51-aa51d7c1bb11": {
+              "id": "f7d5e178-ce65-42ce-9b51-aa51d7c1bb11",
+              "name": "capacite",
+              "type": "ClassAttribute",
+              "owner": "ad0e1c7d-0e22-4354-b614-92fe0b6bbe69",
+              "bounds": {
+                "x": -379.5,
+                "y": -459.5,
+                "width": 419,
+                "height": 30
+              },
+              "code": "",
+              "visibility": "public",
+              "attributeType": "int",
+              "implementationType": "none",
+              "stateMachineId": "",
+              "quantumCircuitId": "",
+              "isOptional": false
+            },
+            "b179949d-eff3-418b-8015-ecd561a8bcba": {
+              "id": "b179949d-eff3-418b-8015-ecd561a8bcba",
+              "name": "prixBase",
+              "type": "ClassAttribute",
+              "owner": "ad0e1c7d-0e22-4354-b614-92fe0b6bbe69",
+              "bounds": {
+                "x": -379.5,
+                "y": -429.5,
+                "width": 419,
+                "height": 30
+              },
+              "code": "",
+              "visibility": "public",
+              "attributeType": "int",
+              "implementationType": "none",
+              "stateMachineId": "",
+              "quantumCircuitId": "",
+              "isOptional": false
+            },
+            "30864310-05bc-4139-9976-77bfe73c25d6": {
+              "id": "30864310-05bc-4139-9976-77bfe73c25d6",
+              "name": "+ estDisponible(dateDebut, dateFin)",
+              "type": "ClassMethod",
+              "owner": "ad0e1c7d-0e22-4354-b614-92fe0b6bbe69",
+              "bounds": {
+                "x": -379.5,
+                "y": -399.5,
+                "width": 419,
+                "height": 30
+              },
+              "code": "def estDisponible(self, dateDebut, dateFin):\n    \"\"\"Vérifie si la salle est disponible pour les dates données.\"\"\"\n\n    for reservation in self.reservations:\n\n        if not (dateFin <= reservation.dateDebut or dateDebut >= reservation.dateFin):\n            return False\n\n    return True",
+              "visibility": "public",
+              "attributeType": "str",
+              "implementationType": "code",
+              "stateMachineId": "",
+              "quantumCircuitId": "",
+              "isOptional": false
+            },
+            "4b660fe6-203f-444d-b54c-82e74f77bd51": {
+              "id": "4b660fe6-203f-444d-b54c-82e74f77bd51",
+              "name": "+ ajouterIndisponibilite(dateDebut, dateFin)",
+              "type": "ClassMethod",
+              "owner": "ad0e1c7d-0e22-4354-b614-92fe0b6bbe69",
+              "bounds": {
+                "x": -379.5,
+                "y": -369.5,
+                "width": 419,
+                "height": 30
+              },
+              "code": "",
+              "visibility": "public",
+              "attributeType": "str",
+              "implementationType": "none",
+              "stateMachineId": "",
+              "quantumCircuitId": "",
+              "isOptional": false
+            },
+            "e72e81ae-7444-4bbb-ac02-c3619d5d16b7": {
+              "id": "e72e81ae-7444-4bbb-ac02-c3619d5d16b7",
+              "name": "+ verifierCapacite(nbParticipants)",
+              "type": "ClassMethod",
+              "owner": "ad0e1c7d-0e22-4354-b614-92fe0b6bbe69",
+              "bounds": {
+                "x": -379.5,
+                "y": -339.5,
+                "width": 419,
+                "height": 30
+              },
+              "code": "def verifierCapacite(self, nbParticipants):\n    \"\"\"Vérifie si la capacité de la salle est suffisante.\"\"\"\n    return nbParticipants <= self.capacite",
+              "visibility": "public",
+              "attributeType": "str",
+              "implementationType": "code",
+              "stateMachineId": "",
+              "quantumCircuitId": "",
+              "isOptional": false
+            },
+            "fda76faf-e698-4bb1-ba36-e071b04a343c": {
+              "id": "fda76faf-e698-4bb1-ba36-e071b04a343c",
+              "name": "+ calculerCout(duree)",
+              "type": "ClassMethod",
+              "owner": "ad0e1c7d-0e22-4354-b614-92fe0b6bbe69",
+              "bounds": {
+                "x": -379.5,
+                "y": -309.5,
+                "width": 419,
+                "height": 30
+              },
+              "code": "def calculerCout(self, duree):\n    \"\"\"Calcule le coût de location de la salle.\"\"\"\n    return self.prixBase * duree",
+              "visibility": "public",
+              "attributeType": "str",
+              "implementationType": "code",
+              "stateMachineId": "",
+              "quantumCircuitId": "",
+              "isOptional": false
+            },
+            "c23d8198-2b7f-4916-b57c-16fc873deb31": {
+              "id": "c23d8198-2b7f-4916-b57c-16fc873deb31",
+              "name": "+ Salle(nom: str, type: str, capacite: int, prixBase: float, centre: CentreCongres)",
+              "type": "ClassMethod",
+              "owner": "ad0e1c7d-0e22-4354-b614-92fe0b6bbe69",
+              "bounds": {
+                "x": -379.5,
+                "y": -279.5,
+                "width": 419,
+                "height": 30
+              },
+              "code": "",
+              "visibility": "public",
+              "attributeType": "str",
+              "implementationType": "none",
+              "stateMachineId": "",
+              "quantumCircuitId": "",
+              "isOptional": false
+            },
+            "b31cacdd-d1da-42a0-9fc5-919059188167": {
+              "id": "b31cacdd-d1da-42a0-9fc5-919059188167",
+              "name": "CentreCongres",
+              "type": "Class",
+              "owner": null,
+              "bounds": {
+                "x": 240,
+                "y": -440,
+                "width": 420,
+                "height": 130
+              },
+              "attributes": [
+                "13d4e97b-2627-4855-b924-9b2f81f0cc9e",
+                "5a3db978-49ff-457f-838c-70e5569e2bff"
+              ],
+              "methods": [
+                "d715e36b-bb23-4dd7-a579-ac574eff6889"
+              ]
+            },
+            "13d4e97b-2627-4855-b924-9b2f81f0cc9e": {
+              "id": "13d4e97b-2627-4855-b924-9b2f81f0cc9e",
+              "name": "nom",
+              "type": "ClassAttribute",
+              "owner": "b31cacdd-d1da-42a0-9fc5-919059188167",
+              "bounds": {
+                "x": 240.5,
+                "y": -399.5,
+                "width": 419,
+                "height": 30
+              },
+              "code": "",
+              "visibility": "public",
+              "attributeType": "str",
+              "implementationType": "none",
+              "stateMachineId": "",
+              "quantumCircuitId": "",
+              "isOptional": false
+            },
+            "5a3db978-49ff-457f-838c-70e5569e2bff": {
+              "id": "5a3db978-49ff-457f-838c-70e5569e2bff",
+              "name": "adresse",
+              "type": "ClassAttribute",
+              "owner": "b31cacdd-d1da-42a0-9fc5-919059188167",
+              "bounds": {
+                "x": 240.5,
+                "y": -369.5,
+                "width": 419,
+                "height": 30
+              },
+              "code": "",
+              "visibility": "public",
+              "attributeType": "str",
+              "implementationType": "none",
+              "stateMachineId": "",
+              "quantumCircuitId": "",
+              "isOptional": false
+            },
+            "d715e36b-bb23-4dd7-a579-ac574eff6889": {
+              "id": "d715e36b-bb23-4dd7-a579-ac574eff6889",
+              "name": "+ CentreCongres(nom: str, adresse: str)",
+              "type": "ClassMethod",
+              "owner": "b31cacdd-d1da-42a0-9fc5-919059188167",
+              "bounds": {
+                "x": 240.5,
+                "y": -339.5,
+                "width": 419,
+                "height": 30
+              },
+              "code": "",
+              "visibility": "public",
+              "attributeType": "str",
+              "implementationType": "none",
+              "stateMachineId": "",
+              "quantumCircuitId": "",
+              "isOptional": false
+            },
+            "b691118d-2f4f-4098-969b-8032ac993bc4": {
+              "id": "b691118d-2f4f-4098-969b-8032ac993bc4",
+              "name": "Gestionnaire",
+              "type": "Class",
+              "owner": null,
+              "bounds": {
+                "x": 330,
+                "y": -80,
+                "width": 420,
+                "height": 250
+              },
+              "attributes": [
+                "47a63acb-8eea-4dff-8c6c-11601fad06f0"
+              ],
+              "methods": [
+                "f584934f-c5de-4387-a15c-376fba813ebe",
+                "9062163e-96aa-44ae-925e-7775ea6e4fb5",
+                "8e675f39-4be3-498c-a6b5-fcbfa149f438",
+                "f892d50a-c313-4842-bcc7-d691c45452a2",
+                "58fae4b9-85cb-4d62-b3e9-727d5fb27cf5",
+                "61604041-6b31-4dba-bc6f-c0ad0dbe27c2"
+              ]
+            },
+            "47a63acb-8eea-4dff-8c6c-11601fad06f0": {
+              "id": "47a63acb-8eea-4dff-8c6c-11601fad06f0",
+              "name": "attribut",
+              "type": "ClassAttribute",
+              "owner": "b691118d-2f4f-4098-969b-8032ac993bc4",
+              "bounds": {
+                "x": 330.5,
+                "y": -39.5,
+                "width": 419,
+                "height": 30
+              },
+              "code": "",
+              "visibility": "public",
+              "attributeType": "str",
+              "implementationType": "none",
+              "stateMachineId": "",
+              "quantumCircuitId": "",
+              "isOptional": false
+            },
+            "f584934f-c5de-4387-a15c-376fba813ebe": {
+              "id": "f584934f-c5de-4387-a15c-376fba813ebe",
+              "name": "+ creerReservation(evenement, salle, dateDebut, dateFin)",
+              "type": "ClassMethod",
+              "owner": "b691118d-2f4f-4098-969b-8032ac993bc4",
+              "bounds": {
+                "x": 330.5,
+                "y": -9.5,
+                "width": 419,
+                "height": 30
+              },
+              "code": "def creerReservation(self, evenement, salle, dateDebut, dateFin):\n    \"\"\"Crée une nouvelle réservation.\"\"\"\n\n    if not salle.estDisponible(dateDebut, dateFin):\n        raise Exception(\"Salle non disponible\")\n\n    reservation = Reservation()\n    reservation.evenement = evenement\n    reservation.salle = salle\n    reservation.dateDebut = dateDebut\n    reservation.dateFin = dateFin\n\n    return reservation",
+              "visibility": "public",
+              "attributeType": "str",
+              "implementationType": "code",
+              "stateMachineId": "",
+              "quantumCircuitId": "",
+              "isOptional": false
+            },
+            "9062163e-96aa-44ae-925e-7775ea6e4fb5": {
+              "id": "9062163e-96aa-44ae-925e-7775ea6e4fb5",
+              "name": "+ definirTarif(nomSaison: str, prixUnitaire: float, dateDebut: date, dateFin: date): Tarif",
+              "type": "ClassMethod",
+              "owner": "b691118d-2f4f-4098-969b-8032ac993bc4",
+              "bounds": {
+                "x": 330.5,
+                "y": 20.5,
+                "width": 419,
+                "height": 30
+              },
+              "code": "",
+              "visibility": "public",
+              "attributeType": "str",
+              "implementationType": "none",
+              "stateMachineId": "",
+              "quantumCircuitId": "",
+              "isOptional": false
+            },
+            "8e675f39-4be3-498c-a6b5-fcbfa149f438": {
+              "id": "8e675f39-4be3-498c-a6b5-fcbfa149f438",
+              "name": "+ annulerReservation(reservation)",
+              "type": "ClassMethod",
+              "owner": "b691118d-2f4f-4098-969b-8032ac993bc4",
+              "bounds": {
+                "x": 330.5,
+                "y": 50.5,
+                "width": 419,
+                "height": 30
+              },
+              "code": "def annulerReservation(self, reservation):\n    \"\"\"Annule une réservation.\"\"\"\n    reservation.annuler()",
+              "visibility": "public",
+              "attributeType": "str",
+              "implementationType": "code",
+              "stateMachineId": "",
+              "quantumCircuitId": "",
+              "isOptional": false
+            },
+            "f892d50a-c313-4842-bcc7-d691c45452a2": {
+              "id": "f892d50a-c313-4842-bcc7-d691c45452a2",
+              "name": "+ modifierReservation(reservation, dateDebut, dateFin)",
+              "type": "ClassMethod",
+              "owner": "b691118d-2f4f-4098-969b-8032ac993bc4",
+              "bounds": {
+                "x": 330.5,
+                "y": 80.5,
+                "width": 419,
+                "height": 30
+              },
+              "code": "def modifierReservation(self, reservation, dateDebut, dateFin):\n    \"\"\"Modifie une réservation.\"\"\"\n    reservation.modifierDates(dateDebut, dateFin)",
+              "visibility": "public",
+              "attributeType": "str",
+              "implementationType": "code",
+              "stateMachineId": "",
+              "quantumCircuitId": "",
+              "isOptional": false
+            },
+            "58fae4b9-85cb-4d62-b3e9-727d5fb27cf5": {
+              "id": "58fae4b9-85cb-4d62-b3e9-727d5fb27cf5",
+              "name": "+ consulterStatistiques()",
+              "type": "ClassMethod",
+              "owner": "b691118d-2f4f-4098-969b-8032ac993bc4",
+              "bounds": {
+                "x": 330.5,
+                "y": 110.5,
+                "width": 419,
+                "height": 30
+              },
+              "code": "",
+              "visibility": "public",
+              "attributeType": "str",
+              "implementationType": "none",
+              "stateMachineId": "",
+              "quantumCircuitId": "",
+              "isOptional": false
+            },
+            "61604041-6b31-4dba-bc6f-c0ad0dbe27c2": {
+              "id": "61604041-6b31-4dba-bc6f-c0ad0dbe27c2",
+              "name": "+ Gestionnaire(attribute: str, centre: CentreCongres)",
+              "type": "ClassMethod",
+              "owner": "b691118d-2f4f-4098-969b-8032ac993bc4",
+              "bounds": {
+                "x": 330.5,
+                "y": 140.5,
+                "width": 419,
+                "height": 30
+              },
+              "code": "",
+              "visibility": "public",
+              "attributeType": "str",
+              "implementationType": "none",
+              "stateMachineId": "",
+              "quantumCircuitId": "",
+              "isOptional": false
+            },
+            "aab12259-a717-4947-8312-72e7ae9172c3": {
+              "id": "aab12259-a717-4947-8312-72e7ae9172c3",
+              "name": "Evenement",
+              "type": "Class",
+              "owner": null,
+              "bounds": {
+                "x": -320,
+                "y": 390,
+                "width": 420,
+                "height": 340
+              },
+              "attributes": [
+                "7eb44a06-135d-409f-b685-b4bc85097627",
+                "46ba5ff6-1e70-4394-b116-9dd9b50b624e",
+                "b998876e-30c3-4ed6-9f68-e52c6778b2ad",
+                "7d976213-e101-44a6-94ad-2963682dd285",
+                "5e3dfc42-d152-4137-838f-06fbffed66bc"
+              ],
+              "methods": [
+                "616e45ff-c3a7-4ff6-b587-4503e49b5f39",
+                "3ac076fc-0633-47f5-a602-a4502ed9b3c5",
+                "e34840a0-25c9-42e8-9180-99b0b4821599",
+                "b34dc152-425d-4fcc-a0e6-a43845f0e625",
+                "0a26b998-33b4-4782-b980-8de4a976c5a0"
+              ]
+            },
+            "7eb44a06-135d-409f-b685-b4bc85097627": {
+              "id": "7eb44a06-135d-409f-b685-b4bc85097627",
+              "name": "nom",
+              "type": "ClassAttribute",
+              "owner": "aab12259-a717-4947-8312-72e7ae9172c3",
+              "bounds": {
+                "x": -319.5,
+                "y": 430.5,
+                "width": 419,
+                "height": 30
+              },
+              "code": "",
+              "visibility": "public",
+              "attributeType": "str",
+              "implementationType": "none",
+              "stateMachineId": "",
+              "quantumCircuitId": "",
+              "isOptional": false
+            },
+            "46ba5ff6-1e70-4394-b116-9dd9b50b624e": {
+              "id": "46ba5ff6-1e70-4394-b116-9dd9b50b624e",
+              "name": "description",
+              "type": "ClassAttribute",
+              "owner": "aab12259-a717-4947-8312-72e7ae9172c3",
+              "bounds": {
+                "x": -319.5,
+                "y": 460.5,
+                "width": 419,
+                "height": 30
+              },
+              "code": "",
+              "visibility": "public",
+              "attributeType": "str",
+              "implementationType": "none",
+              "stateMachineId": "",
+              "quantumCircuitId": "",
+              "isOptional": false
+            },
+            "b998876e-30c3-4ed6-9f68-e52c6778b2ad": {
+              "id": "b998876e-30c3-4ed6-9f68-e52c6778b2ad",
+              "name": "nbParticipants",
+              "type": "ClassAttribute",
+              "owner": "aab12259-a717-4947-8312-72e7ae9172c3",
+              "bounds": {
+                "x": -319.5,
+                "y": 490.5,
+                "width": 419,
+                "height": 30
+              },
+              "code": "",
+              "visibility": "public",
+              "attributeType": "int",
+              "implementationType": "none",
+              "stateMachineId": "",
+              "quantumCircuitId": "",
+              "isOptional": false
+            },
+            "7d976213-e101-44a6-94ad-2963682dd285": {
+              "id": "7d976213-e101-44a6-94ad-2963682dd285",
+              "name": "emailreferent",
+              "type": "ClassAttribute",
+              "owner": "aab12259-a717-4947-8312-72e7ae9172c3",
+              "bounds": {
+                "x": -319.5,
+                "y": 520.5,
+                "width": 419,
+                "height": 30
+              },
+              "code": "",
+              "visibility": "public",
+              "attributeType": "str",
+              "implementationType": "none",
+              "stateMachineId": "",
+              "quantumCircuitId": "",
+              "isOptional": false
+            },
+            "5e3dfc42-d152-4137-838f-06fbffed66bc": {
+              "id": "5e3dfc42-d152-4137-838f-06fbffed66bc",
+              "name": "statistique",
+              "type": "ClassAttribute",
+              "owner": "aab12259-a717-4947-8312-72e7ae9172c3",
+              "bounds": {
+                "x": -319.5,
+                "y": 550.5,
+                "width": 419,
+                "height": 30
+              },
+              "code": "",
+              "visibility": "public",
+              "attributeType": "str",
+              "implementationType": "none",
+              "stateMachineId": "",
+              "quantumCircuitId": "",
+              "isOptional": false
+            },
+            "616e45ff-c3a7-4ff6-b587-4503e49b5f39": {
+              "id": "616e45ff-c3a7-4ff6-b587-4503e49b5f39",
+              "name": "+ getDuree(dateDebut, dateFin)",
+              "type": "ClassMethod",
+              "owner": "aab12259-a717-4947-8312-72e7ae9172c3",
+              "bounds": {
+                "x": -319.5,
+                "y": 580.5,
+                "width": 419,
+                "height": 30
+              },
+              "code": "def getDuree(self, dateDebut, dateFin):\n    \"\"\"Retourne la durée de l'événement.\"\"\"\n    return (dateFin - dateDebut).days",
+              "visibility": "public",
+              "attributeType": "str",
+              "implementationType": "code",
+              "stateMachineId": "",
+              "quantumCircuitId": "",
+              "isOptional": false
+            },
+            "3ac076fc-0633-47f5-a602-a4502ed9b3c5": {
+              "id": "3ac076fc-0633-47f5-a602-a4502ed9b3c5",
+              "name": "+ genererStatistiques()",
+              "type": "ClassMethod",
+              "owner": "aab12259-a717-4947-8312-72e7ae9172c3",
+              "bounds": {
+                "x": -319.5,
+                "y": 610.5,
+                "width": 419,
+                "height": 30
+              },
+              "code": "",
+              "visibility": "public",
+              "attributeType": "str",
+              "implementationType": "none",
+              "stateMachineId": "",
+              "quantumCircuitId": "",
+              "isOptional": false
+            },
+            "e34840a0-25c9-42e8-9180-99b0b4821599": {
+              "id": "e34840a0-25c9-42e8-9180-99b0b4821599",
+              "name": "+ ajouterReservation(reservation)",
+              "type": "ClassMethod",
+              "owner": "aab12259-a717-4947-8312-72e7ae9172c3",
+              "bounds": {
+                "x": -319.5,
+                "y": 640.5,
+                "width": 419,
+                "height": 30
+              },
+              "code": "def ajouterReservation(self, reservation):\n    \"\"\"Ajoute une réservation à l'événement.\"\"\"\n    self.reservations.append(reservation)",
+              "visibility": "public",
+              "attributeType": "str",
+              "implementationType": "code",
+              "stateMachineId": "",
+              "quantumCircuitId": "",
+              "isOptional": false
+            },
+            "b34dc152-425d-4fcc-a0e6-a43845f0e625": {
+              "id": "b34dc152-425d-4fcc-a0e6-a43845f0e625",
+              "name": "+ calculerNombreParticipantsTotal()",
+              "type": "ClassMethod",
+              "owner": "aab12259-a717-4947-8312-72e7ae9172c3",
+              "bounds": {
+                "x": -319.5,
+                "y": 670.5,
+                "width": 419,
+                "height": 30
+              },
+              "code": "def calculerNombreParticipantsTotal(self):\n    \"\"\"Calcule le nombre total de participants.\"\"\"\n    return self.nbParticipants",
+              "visibility": "public",
+              "attributeType": "str",
+              "implementationType": "code",
+              "stateMachineId": "",
+              "quantumCircuitId": "",
+              "isOptional": false
+            },
+            "0a26b998-33b4-4782-b980-8de4a976c5a0": {
+              "id": "0a26b998-33b4-4782-b980-8de4a976c5a0",
+              "name": "+ Evenement(nom: str, description: str, nbParticipants: int, emailReferent: str)",
+              "type": "ClassMethod",
+              "owner": "aab12259-a717-4947-8312-72e7ae9172c3",
+              "bounds": {
+                "x": -319.5,
+                "y": 700.5,
+                "width": 419,
+                "height": 30
+              },
+              "code": "",
+              "visibility": "public",
+              "attributeType": "str",
+              "implementationType": "none",
+              "stateMachineId": "",
+              "quantumCircuitId": "",
+              "isOptional": false
+            },
+            "f3f0ad35-3a96-491a-9c9e-449bf977888f": {
+              "id": "f3f0ad35-3a96-491a-9c9e-449bf977888f",
+              "name": "Ressource",
+              "type": "AbstractClass",
+              "owner": null,
+              "bounds": {
+                "x": -1070,
+                "y": -170,
+                "width": 420,
+                "height": 290
+              },
+              "attributes": [
+                "e0aea7af-056c-4562-9b48-6753749ac6a8",
+                "9b657bdb-f886-46f0-ad07-d981f905ebe8",
+                "f788e882-f0f7-4bd4-87bf-6ba90e55744c",
+                "51f4567f-a285-41a4-9dcd-b4d555b68d34"
+              ],
+              "methods": [
+                "f3aea531-9a2b-4507-a149-d610b75d4ca0",
+                "8b0d1fd8-7143-4924-9ab9-9d09ab68959a",
+                "4920d8dd-5898-419d-88f7-f6a5a1f10311",
+                "63360bfc-dc52-4d2d-b10c-8f1fd6c4b4e1"
+              ]
+            },
+            "e0aea7af-056c-4562-9b48-6753749ac6a8": {
+              "id": "e0aea7af-056c-4562-9b48-6753749ac6a8",
+              "name": "nom",
+              "type": "ClassAttribute",
+              "owner": "f3f0ad35-3a96-491a-9c9e-449bf977888f",
+              "bounds": {
+                "x": -1069.5,
+                "y": -119.5,
+                "width": 419,
+                "height": 30
+              },
+              "code": "",
+              "visibility": "public",
+              "attributeType": "str",
+              "implementationType": "none",
+              "stateMachineId": "",
+              "quantumCircuitId": "",
+              "isOptional": false
+            },
+            "9b657bdb-f886-46f0-ad07-d981f905ebe8": {
+              "id": "9b657bdb-f886-46f0-ad07-d981f905ebe8",
+              "name": "type",
+              "type": "ClassAttribute",
+              "owner": "f3f0ad35-3a96-491a-9c9e-449bf977888f",
+              "bounds": {
+                "x": -1069.5,
+                "y": -89.5,
+                "width": 419,
+                "height": 30
+              },
+              "code": "",
+              "visibility": "public",
+              "attributeType": "str",
+              "implementationType": "none",
+              "stateMachineId": "",
+              "quantumCircuitId": "",
+              "isOptional": false
+            },
+            "f788e882-f0f7-4bd4-87bf-6ba90e55744c": {
+              "id": "f788e882-f0f7-4bd4-87bf-6ba90e55744c",
+              "name": "prix",
+              "type": "ClassAttribute",
+              "owner": "f3f0ad35-3a96-491a-9c9e-449bf977888f",
+              "bounds": {
+                "x": -1069.5,
+                "y": -59.5,
+                "width": 419,
+                "height": 30
+              },
+              "code": "",
+              "visibility": "public",
+              "attributeType": "int",
+              "implementationType": "none",
+              "stateMachineId": "",
+              "quantumCircuitId": "",
+              "isOptional": false
+            },
+            "51f4567f-a285-41a4-9dcd-b4d555b68d34": {
+              "id": "51f4567f-a285-41a4-9dcd-b4d555b68d34",
+              "name": "stockMax",
+              "type": "ClassAttribute",
+              "owner": "f3f0ad35-3a96-491a-9c9e-449bf977888f",
+              "bounds": {
+                "x": -1069.5,
+                "y": -29.5,
+                "width": 419,
+                "height": 30
+              },
+              "code": "",
+              "visibility": "public",
+              "attributeType": "int",
+              "implementationType": "none",
+              "stateMachineId": "",
+              "quantumCircuitId": "",
+              "isOptional": false
+            },
+            "f3aea531-9a2b-4507-a149-d610b75d4ca0": {
+              "id": "f3aea531-9a2b-4507-a149-d610b75d4ca0",
+              "name": "+ estDisponible(dateDebut, dateFin): bool",
+              "type": "ClassMethod",
+              "owner": "f3f0ad35-3a96-491a-9c9e-449bf977888f",
+              "bounds": {
+                "x": -1069.5,
+                "y": 0.5,
+                "width": 419,
+                "height": 30
+              },
+              "code": "",
+              "visibility": "public",
+              "attributeType": "str",
+              "implementationType": "none",
+              "stateMachineId": "",
+              "quantumCircuitId": "",
+              "isOptional": false
+            },
+            "8b0d1fd8-7143-4924-9ab9-9d09ab68959a": {
+              "id": "8b0d1fd8-7143-4924-9ab9-9d09ab68959a",
+              "name": "+ verifierStock(quantite): bool",
+              "type": "ClassMethod",
+              "owner": "f3f0ad35-3a96-491a-9c9e-449bf977888f",
+              "bounds": {
+                "x": -1069.5,
+                "y": 30.5,
+                "width": 419,
+                "height": 30
+              },
+              "code": "",
+              "visibility": "public",
+              "attributeType": "str",
+              "implementationType": "none",
+              "stateMachineId": "",
+              "quantumCircuitId": "",
+              "isOptional": false
+            },
+            "4920d8dd-5898-419d-88f7-f6a5a1f10311": {
+              "id": "4920d8dd-5898-419d-88f7-f6a5a1f10311",
+              "name": "+ calculerCout(quantite, duree): float",
+              "type": "ClassMethod",
+              "owner": "f3f0ad35-3a96-491a-9c9e-449bf977888f",
+              "bounds": {
+                "x": -1069.5,
+                "y": 60.5,
+                "width": 419,
+                "height": 30
+              },
+              "code": "",
+              "visibility": "public",
+              "attributeType": "str",
+              "implementationType": "none",
+              "stateMachineId": "",
+              "quantumCircuitId": "",
+              "isOptional": false
+            },
+            "63360bfc-dc52-4d2d-b10c-8f1fd6c4b4e1": {
+              "id": "63360bfc-dc52-4d2d-b10c-8f1fd6c4b4e1",
+              "name": "+ Ressource(nom: str, type: str, prix: float, stockMax: int)",
+              "type": "ClassMethod",
+              "owner": "f3f0ad35-3a96-491a-9c9e-449bf977888f",
+              "bounds": {
+                "x": -1069.5,
+                "y": 90.5,
+                "width": 419,
+                "height": 30
+              },
+              "code": "",
+              "visibility": "public",
+              "attributeType": "str",
+              "implementationType": "none",
+              "stateMachineId": "",
+              "quantumCircuitId": "",
+              "isOptional": false
+            },
+            "7e70c443-965a-440f-9f8b-1a9e0d6b3664": {
+              "id": "7e70c443-965a-440f-9f8b-1a9e0d6b3664",
+              "name": "Materiel",
+              "type": "Class",
+              "owner": null,
+              "bounds": {
+                "x": -1350,
+                "y": 160,
+                "width": 420,
+                "height": 100
+              },
+              "attributes": [
+                "6743c704-870b-4312-b771-98123eb9b549"
+              ],
+              "methods": [
+                "35b595c8-242a-40a8-a143-5a00c14b35dc"
+              ]
+            },
+            "6743c704-870b-4312-b771-98123eb9b549": {
+              "id": "6743c704-870b-4312-b771-98123eb9b549",
+              "name": "nom",
+              "type": "ClassAttribute",
+              "owner": "7e70c443-965a-440f-9f8b-1a9e0d6b3664",
+              "bounds": {
+                "x": -1349.5,
+                "y": 200.5,
+                "width": 419,
+                "height": 30
+              },
+              "code": "",
+              "visibility": "public",
+              "attributeType": "str",
+              "implementationType": "none",
+              "stateMachineId": "",
+              "quantumCircuitId": "",
+              "isOptional": false
+            },
+            "35b595c8-242a-40a8-a143-5a00c14b35dc": {
+              "id": "35b595c8-242a-40a8-a143-5a00c14b35dc",
+              "name": "+ Materiel(nom: str, type: str, prix: float, stockMax: int)",
+              "type": "ClassMethod",
+              "owner": "7e70c443-965a-440f-9f8b-1a9e0d6b3664",
+              "bounds": {
+                "x": -1349.5,
+                "y": 230.5,
+                "width": 419,
+                "height": 30
+              },
+              "code": "",
+              "visibility": "public",
+              "attributeType": "str",
+              "implementationType": "none",
+              "stateMachineId": "",
+              "quantumCircuitId": "",
+              "isOptional": false
+            },
+            "fbac6ee8-8f5f-49e0-9587-3271b95069c7": {
+              "id": "fbac6ee8-8f5f-49e0-9587-3271b95069c7",
+              "name": "Prestation",
+              "type": "Class",
+              "owner": null,
+              "bounds": {
+                "x": -820,
+                "y": 160,
+                "width": 420,
+                "height": 100
+              },
+              "attributes": [
+                "9b6b8e49-d949-4f73-8566-4be23e50282f"
+              ],
+              "methods": [
+                "2f4a582f-fe90-4e66-b1d6-f91b6b8d07ed"
+              ]
+            },
+            "9b6b8e49-d949-4f73-8566-4be23e50282f": {
+              "id": "9b6b8e49-d949-4f73-8566-4be23e50282f",
+              "name": "nom",
+              "type": "ClassAttribute",
+              "owner": "fbac6ee8-8f5f-49e0-9587-3271b95069c7",
+              "bounds": {
+                "x": -819.5,
+                "y": 200.5,
+                "width": 419,
+                "height": 30
+              },
+              "code": "",
+              "visibility": "public",
+              "attributeType": "str",
+              "implementationType": "none",
+              "stateMachineId": "",
+              "quantumCircuitId": "",
+              "isOptional": false
+            },
+            "2f4a582f-fe90-4e66-b1d6-f91b6b8d07ed": {
+              "id": "2f4a582f-fe90-4e66-b1d6-f91b6b8d07ed",
+              "name": "+ Prestation(nom: str, type: str, prix: float, stockMax: int)",
+              "type": "ClassMethod",
+              "owner": "fbac6ee8-8f5f-49e0-9587-3271b95069c7",
+              "bounds": {
+                "x": -819.5,
+                "y": 230.5,
+                "width": 419,
+                "height": 30
+              },
+              "code": "",
+              "visibility": "public",
+              "attributeType": "str",
+              "implementationType": "none",
+              "stateMachineId": "",
+              "quantumCircuitId": "",
+              "isOptional": false
+            },
+            "b4d8b18e-d410-4c9a-ae72-3c030b8ce3c2": {
+              "id": "b4d8b18e-d410-4c9a-ae72-3c030b8ce3c2",
+              "name": "Tarif",
+              "type": "Class",
+              "owner": null,
+              "bounds": {
+                "x": -1130,
+                "y": -570,
+                "width": 420,
+                "height": 280
+              },
+              "attributes": [
+                "5aa6b820-c4ae-4ff6-976a-2a9004fdcf44",
+                "a6f71041-74a2-40c8-bffa-30564e3daf5f",
+                "66128a06-9496-45a6-9e1b-4eed366cb6fa",
+                "708e978c-8e49-42f2-a3a7-3d726af827ce",
+                "2e116290-f06e-4930-bcbb-3d011448f8bf"
+              ],
+              "methods": [
+                "c8c3b646-0b0a-4a65-8101-61d19de4aff9",
+                "d1e6ae23-7ef9-4812-91fa-b39887e081f3",
+                "77838f5c-49dc-434c-a0f3-bdd1febf1799"
+              ]
+            },
+            "5aa6b820-c4ae-4ff6-976a-2a9004fdcf44": {
+              "id": "5aa6b820-c4ae-4ff6-976a-2a9004fdcf44",
+              "name": "nomSaison",
+              "type": "ClassAttribute",
+              "owner": "b4d8b18e-d410-4c9a-ae72-3c030b8ce3c2",
+              "bounds": {
+                "x": -1129.5,
+                "y": -529.5,
+                "width": 419,
+                "height": 30
+              },
+              "code": "",
+              "visibility": "public",
+              "attributeType": "str",
+              "implementationType": "none",
+              "stateMachineId": "",
+              "quantumCircuitId": "",
+              "isOptional": false
+            },
+            "a6f71041-74a2-40c8-bffa-30564e3daf5f": {
+              "id": "a6f71041-74a2-40c8-bffa-30564e3daf5f",
+              "name": "prixUnitaire",
+              "type": "ClassAttribute",
+              "owner": "b4d8b18e-d410-4c9a-ae72-3c030b8ce3c2",
+              "bounds": {
+                "x": -1129.5,
+                "y": -499.5,
+                "width": 419,
+                "height": 30
+              },
+              "code": "",
+              "visibility": "public",
+              "attributeType": "int",
+              "implementationType": "none",
+              "stateMachineId": "",
+              "quantumCircuitId": "",
+              "isOptional": false
+            },
+            "66128a06-9496-45a6-9e1b-4eed366cb6fa": {
+              "id": "66128a06-9496-45a6-9e1b-4eed366cb6fa",
+              "name": "unite",
+              "type": "ClassAttribute",
+              "owner": "b4d8b18e-d410-4c9a-ae72-3c030b8ce3c2",
+              "bounds": {
+                "x": -1129.5,
+                "y": -469.5,
+                "width": 419,
+                "height": 30
+              },
+              "code": "",
+              "visibility": "public",
+              "attributeType": "str",
+              "implementationType": "none",
+              "stateMachineId": "",
+              "quantumCircuitId": "",
+              "isOptional": false
+            },
+            "708e978c-8e49-42f2-a3a7-3d726af827ce": {
+              "id": "708e978c-8e49-42f2-a3a7-3d726af827ce",
+              "name": "dateDebutSaison",
+              "type": "ClassAttribute",
+              "owner": "b4d8b18e-d410-4c9a-ae72-3c030b8ce3c2",
+              "bounds": {
+                "x": -1129.5,
+                "y": -439.5,
+                "width": 419,
+                "height": 30
+              },
+              "code": "",
+              "visibility": "public",
+              "attributeType": "date",
+              "implementationType": "none",
+              "stateMachineId": "",
+              "quantumCircuitId": "",
+              "isOptional": false
+            },
+            "2e116290-f06e-4930-bcbb-3d011448f8bf": {
+              "id": "2e116290-f06e-4930-bcbb-3d011448f8bf",
+              "name": "dateFinSaison",
+              "type": "ClassAttribute",
+              "owner": "b4d8b18e-d410-4c9a-ae72-3c030b8ce3c2",
+              "bounds": {
+                "x": -1129.5,
+                "y": -409.5,
+                "width": 419,
+                "height": 30
+              },
+              "code": "",
+              "visibility": "public",
+              "attributeType": "date",
+              "implementationType": "none",
+              "stateMachineId": "",
+              "quantumCircuitId": "",
+              "isOptional": false
+            },
+            "c8c3b646-0b0a-4a65-8101-61d19de4aff9": {
+              "id": "c8c3b646-0b0a-4a65-8101-61d19de4aff9",
+              "name": "+ estApplicable(date)",
+              "type": "ClassMethod",
+              "owner": "b4d8b18e-d410-4c9a-ae72-3c030b8ce3c2",
+              "bounds": {
+                "x": -1129.5,
+                "y": -379.5,
+                "width": 419,
+                "height": 30
+              },
+              "code": "def estApplicable(self, date):\n    \"\"\"Vérifie si le tarif est applicable à une date.\"\"\"\n    return self.dateDebutSaison <= date <= self.dateFinSaison",
+              "visibility": "public",
+              "attributeType": "str",
+              "implementationType": "code",
+              "stateMachineId": "",
+              "quantumCircuitId": "",
+              "isOptional": false
+            },
+            "d1e6ae23-7ef9-4812-91fa-b39887e081f3": {
+              "id": "d1e6ae23-7ef9-4812-91fa-b39887e081f3",
+              "name": "+ calculerPrix(duree)",
+              "type": "ClassMethod",
+              "owner": "b4d8b18e-d410-4c9a-ae72-3c030b8ce3c2",
+              "bounds": {
+                "x": -1129.5,
+                "y": -349.5,
+                "width": 419,
+                "height": 30
+              },
+              "code": "def calculerPrix(self, duree):\n    \"\"\"Calcule le prix selon la durée.\"\"\"\n    return self.prixUnitaire * duree",
+              "visibility": "public",
+              "attributeType": "str",
+              "implementationType": "code",
+              "stateMachineId": "",
+              "quantumCircuitId": "",
+              "isOptional": false
+            },
+            "77838f5c-49dc-434c-a0f3-bdd1febf1799": {
+              "id": "77838f5c-49dc-434c-a0f3-bdd1febf1799",
+              "name": "+ Tarif(nomSaison: str, prixUnitaire: float, unite: str, dateDebutSaison: date, dateFinSaison: date)",
+              "type": "ClassMethod",
+              "owner": "b4d8b18e-d410-4c9a-ae72-3c030b8ce3c2",
+              "bounds": {
+                "x": -1129.5,
+                "y": -319.5,
+                "width": 419,
+                "height": 30
+              },
+              "code": "",
+              "visibility": "public",
+              "attributeType": "str",
+              "implementationType": "none",
+              "stateMachineId": "",
+              "quantumCircuitId": "",
+              "isOptional": false
+            }
+          },
+          "relationships": {
+            "745c1c3e-34e5-4547-bec3-6c894405c76c": {
+              "id": "745c1c3e-34e5-4547-bec3-6c894405c76c",
+              "name": "",
+              "type": "ClassBidirectional",
+              "owner": null,
+              "bounds": {
+                "x": 490,
+                "y": -310,
+                "width": 36.70000076293945,
+                "height": 239
+              },
+              "path": [
+                {
+                  "x": 5,
+                  "y": 230
+                },
+                {
+                  "x": 5,
+                  "y": 0
+                }
+              ],
+              "source": {
+                "direction": "Up",
+                "element": "b691118d-2f4f-4098-969b-8032ac993bc4",
+                "multiplicity": "1..*",
+                "role": ""
+              },
+              "target": {
+                "direction": "Down",
+                "element": "b31cacdd-d1da-42a0-9fc5-919059188167",
+                "multiplicity": "1..1",
+                "role": ""
+              },
+              "isManuallyLayouted": false
+            },
+            "277521f7-a9fa-4be6-ab69-02ad38a3e88e": {
+              "id": "277521f7-a9fa-4be6-ab69-02ad38a3e88e",
+              "name": "",
+              "type": "ClassBidirectional",
+              "owner": null,
+              "bounds": {
+                "x": 40,
+                "y": -385,
+                "width": 200,
+                "height": 48
+              },
+              "path": [
+                {
+                  "x": 200,
+                  "y": 10
+                },
+                {
+                  "x": 0,
+                  "y": 10
+                }
+              ],
+              "source": {
+                "direction": "Left",
+                "element": "b31cacdd-d1da-42a0-9fc5-919059188167",
+                "multiplicity": "1..1",
+                "role": ""
+              },
+              "target": {
+                "direction": "Downright",
+                "element": "ad0e1c7d-0e22-4354-b614-92fe0b6bbe69",
+                "multiplicity": "1..*",
+                "role": ""
+              },
+              "isManuallyLayouted": false
+            },
+            "be04485a-ec50-46b0-88ac-eaff8d3cd5ef": {
+              "id": "be04485a-ec50-46b0-88ac-eaff8d3cd5ef",
+              "name": "",
+              "type": "ClassBidirectional",
+              "owner": null,
+              "bounds": {
+                "x": -120,
+                "y": 240,
+                "width": 36.70000076293945,
+                "height": 159
+              },
+              "path": [
+                {
+                  "x": 5,
+                  "y": 150
+                },
+                {
+                  "x": 5,
+                  "y": 0
+                }
+              ],
+              "source": {
+                "direction": "Up",
+                "element": "aab12259-a717-4947-8312-72e7ae9172c3",
+                "multiplicity": "1..*",
+                "role": ""
+              },
+              "target": {
+                "direction": "Down",
+                "element": "0bc5654a-f648-46c7-8481-e5dedd651d84",
+                "multiplicity": "1..1",
+                "role": ""
+              },
+              "isManuallyLayouted": false
+            },
+            "ff583d3b-9b43-42af-902e-c3845bb5ae35": {
+              "id": "ff583d3b-9b43-42af-902e-c3845bb5ae35",
+              "name": "",
+              "type": "ClassBidirectional",
+              "owner": null,
+              "bounds": {
+                "x": 100,
+                "y": 170,
+                "width": 469.03333282470703,
+                "height": 428
+              },
+              "path": [
+                {
+                  "x": 0,
+                  "y": 390
+                },
+                {
+                  "x": 440,
+                  "y": 390
+                },
+                {
+                  "x": 440,
+                  "y": 0
+                }
+              ],
+              "source": {
+                "direction": "Right",
+                "element": "aab12259-a717-4947-8312-72e7ae9172c3",
+                "multiplicity": "1..1",
+                "role": ""
+              },
+              "target": {
+                "direction": "Down",
+                "element": "b691118d-2f4f-4098-969b-8032ac993bc4",
+                "multiplicity": "1..*",
+                "role": ""
+              },
+              "isManuallyLayouted": false
+            },
+            "facd78ea-0617-4f2b-b9aa-79fa67b2cd05": {
+              "id": "facd78ea-0617-4f2b-b9aa-79fa67b2cd05",
+              "name": "",
+              "type": "ClassBidirectional",
+              "owner": null,
+              "bounds": {
+                "x": -650,
+                "y": -35,
+                "width": 320,
+                "height": 48
+              },
+              "path": [
+                {
+                  "x": 0,
+                  "y": 10
+                },
+                {
+                  "x": 320,
+                  "y": 10
+                }
+              ],
+              "source": {
+                "direction": "Right",
+                "element": "f3f0ad35-3a96-491a-9c9e-449bf977888f",
+                "multiplicity": "0..*",
+                "role": ""
+              },
+              "target": {
+                "direction": "Left",
+                "element": "0bc5654a-f648-46c7-8481-e5dedd651d84",
+                "multiplicity": "0..1",
+                "role": ""
+              },
+              "isManuallyLayouted": false
+            },
+            "03983f8b-04b6-4632-8d48-6f116ee9622d": {
+              "id": "03983f8b-04b6-4632-8d48-6f116ee9622d",
+              "name": "",
+              "type": "ClassBidirectional",
+              "owner": null,
+              "bounds": {
+                "x": -150,
+                "y": -250,
+                "width": 36.70000076293945,
+                "height": 69
+              },
+              "path": [
+                {
+                  "x": 5,
+                  "y": 60
+                },
+                {
+                  "x": 5,
+                  "y": 0
+                }
+              ],
+              "source": {
+                "direction": "Up",
+                "element": "0bc5654a-f648-46c7-8481-e5dedd651d84",
+                "multiplicity": "0..1",
+                "role": ""
+              },
+              "target": {
+                "direction": "Down",
+                "element": "ad0e1c7d-0e22-4354-b614-92fe0b6bbe69",
+                "multiplicity": "1..*",
+                "role": ""
+              },
+              "isManuallyLayouted": false
+            },
+            "44f541df-947c-4ff6-aeba-673903eb76fe": {
+              "id": "44f541df-947c-4ff6-aeba-673903eb76fe",
+              "name": "",
+              "type": "ClassBidirectional",
+              "owner": null,
+              "bounds": {
+                "x": 90,
+                "y": 35,
+                "width": 240,
+                "height": 48
+              },
+              "path": [
+                {
+                  "x": 0,
+                  "y": 10
+                },
+                {
+                  "x": 240,
+                  "y": 10
+                }
+              ],
+              "source": {
+                "direction": "Right",
+                "element": "0bc5654a-f648-46c7-8481-e5dedd651d84",
+                "multiplicity": "0..*",
+                "role": ""
+              },
+              "target": {
+                "direction": "Left",
+                "element": "b691118d-2f4f-4098-969b-8032ac993bc4",
+                "multiplicity": "1..1",
+                "role": ""
+              },
+              "isManuallyLayouted": false
+            },
+            "f335765e-e733-4447-8de0-013107b431b4": {
+              "id": "f335765e-e733-4447-8de0-013107b431b4",
+              "name": "",
+              "type": "ClassInheritance",
+              "owner": null,
+              "bounds": {
+                "x": -740,
+                "y": 120,
+                "width": 10,
+                "height": 41
+              },
+              "path": [
+                {
+                  "x": 5,
+                  "y": 40
+                },
+                {
+                  "x": 5,
+                  "y": 0
+                }
+              ],
+              "source": {
+                "direction": "Up",
+                "element": "fbac6ee8-8f5f-49e0-9587-3271b95069c7",
+                "multiplicity": "",
+                "role": ""
+              },
+              "target": {
+                "direction": "Down",
+                "element": "f3f0ad35-3a96-491a-9c9e-449bf977888f",
+                "multiplicity": "",
+                "role": ""
+              },
+              "isManuallyLayouted": false
+            },
+            "9d9685a2-d774-4d6b-a3f7-3009e212c0e9": {
+              "id": "9d9685a2-d774-4d6b-a3f7-3009e212c0e9",
+              "name": "",
+              "type": "ClassInheritance",
+              "owner": null,
+              "bounds": {
+                "x": -1145,
+                "y": -107.5,
+                "width": 75,
+                "height": 267.5
+              },
+              "path": [
+                {
+                  "x": 5,
+                  "y": 267.5
+                },
+                {
+                  "x": 5,
+                  "y": 10
+                },
+                {
+                  "x": 75,
+                  "y": 10
+                }
+              ],
+              "source": {
+                "direction": "Up",
+                "element": "7e70c443-965a-440f-9f8b-1a9e0d6b3664",
+                "multiplicity": "",
+                "role": ""
+              },
+              "target": {
+                "direction": "Upleft",
+                "element": "f3f0ad35-3a96-491a-9c9e-449bf977888f",
+                "multiplicity": "",
+                "role": ""
+              },
+              "isManuallyLayouted": false
+            },
+            "7dd37103-1a5d-434d-96ff-69e16325873d": {
+              "id": "7dd37103-1a5d-434d-96ff-69e16325873d",
+              "name": "",
+              "type": "ClassBidirectional",
+              "owner": null,
+              "bounds": {
+                "x": -895,
+                "y": -290,
+                "width": 36.70000076293945,
+                "height": 129
+              },
+              "path": [
+                {
+                  "x": 5,
+                  "y": 0
+                },
+                {
+                  "x": 5,
+                  "y": 120
+                }
+              ],
+              "source": {
+                "direction": "Down",
+                "element": "b4d8b18e-d410-4c9a-ae72-3c030b8ce3c2",
+                "multiplicity": "1..1",
+                "role": ""
+              },
+              "target": {
+                "direction": "Up",
+                "element": "f3f0ad35-3a96-491a-9c9e-449bf977888f",
+                "multiplicity": "1..*",
+                "role": ""
+              },
+              "isManuallyLayouted": false
+            },
+            "fc2ff416-c517-4faf-9237-bcd6ad7692d0": {
+              "id": "fc2ff416-c517-4faf-9237-bcd6ad7692d0",
+              "name": "",
+              "type": "ClassBidirectional",
+              "owner": null,
+              "bounds": {
+                "x": -710,
+                "y": -370,
+                "width": 380,
+                "height": 325.5
+              },
+              "path": [
+                {
+                  "x": 0,
+                  "y": 10
+                },
+                {
+                  "x": 190,
+                  "y": 10
+                },
+                {
+                  "x": 190,
+                  "y": 287.5
+                },
+                {
+                  "x": 380,
+                  "y": 287.5
+                }
+              ],
+              "source": {
+                "direction": "Downright",
+                "element": "b4d8b18e-d410-4c9a-ae72-3c030b8ce3c2",
+                "multiplicity": "1..1",
+                "role": ""
+              },
+              "target": {
+                "direction": "Upleft",
+                "element": "0bc5654a-f648-46c7-8481-e5dedd651d84",
+                "multiplicity": "0..*",
+                "role": ""
+              },
+              "isManuallyLayouted": false
+            },
+            "d6149d18-9dfc-4003-9042-bc02b397bc8a": {
+              "id": "d6149d18-9dfc-4003-9042-bc02b397bc8a",
+              "name": "",
+              "type": "ClassBidirectional",
+              "owner": null,
+              "bounds": {
+                "x": -710,
+                "y": -435,
+                "width": 330,
+                "height": 48
+              },
+              "path": [
+                {
+                  "x": 0,
+                  "y": 10
+                },
+                {
+                  "x": 330,
+                  "y": 10
+                }
+              ],
+              "source": {
+                "direction": "Right",
+                "element": "b4d8b18e-d410-4c9a-ae72-3c030b8ce3c2",
+                "multiplicity": "1..1",
+                "role": ""
+              },
+              "target": {
+                "direction": "Left",
+                "element": "ad0e1c7d-0e22-4354-b614-92fe0b6bbe69",
+                "multiplicity": "0..*",
+                "role": ""
+              },
+              "isManuallyLayouted": false
+            }
+          },
+          "assessments": {}
+        },
+        "lastUpdate": "2026-03-12T09:07:47.540Z"
+      },
+      "ObjectDiagram": {
+        "id": "51a12cb6-0993-4b94-9ed7-d3937776822f",
+        "title": "Object Diagram",
+        "model": {
+          "version": "3.0.0",
+          "type": "ObjectDiagram",
+          "size": {
+            "width": 1400,
+            "height": 740
+          },
+          "elements": {},
+          "relationships": {},
+          "interactive": {
+            "elements": {},
+            "relationships": {}
+          },
+          "assessments": {}
+        },
+        "lastUpdate": "2026-03-03T14:03:38.326Z"
+      },
+      "StateMachineDiagram": {
+        "id": "c5e61455-fed0-4f38-a95f-0b8a6373e2c6",
+        "title": "State Machine Diagram",
+        "model": {
+          "version": "3.0.0",
+          "type": "StateMachineDiagram",
+          "size": {
+            "width": 1400,
+            "height": 740
+          },
+          "elements": {},
+          "relationships": {},
+          "interactive": {
+            "elements": {},
+            "relationships": {}
+          },
+          "assessments": {}
+        },
+        "lastUpdate": "2026-03-03T14:03:38.326Z"
+      },
+      "AgentDiagram": {
+        "id": "f3b844de-b8bb-4c78-973c-f9dc48b36239",
+        "title": "Agent Diagram",
+        "model": {
+          "version": "3.0.0",
+          "type": "AgentDiagram",
+          "size": {
+            "width": 1400,
+            "height": 740
+          },
+          "elements": {},
+          "relationships": {},
+          "interactive": {
+            "elements": {},
+            "relationships": {}
+          },
+          "assessments": {}
+        },
+        "lastUpdate": "2026-03-03T14:03:38.326Z"
+      },
+      "UserDiagram": {
+        "id": "04544767-dc8e-4a73-8437-46ce68f40d67",
+        "title": "User Diagram",
+        "model": {
+          "version": "3.0.0",
+          "type": "UserDiagram",
+          "size": {
+            "width": 1400,
+            "height": 740
+          },
+          "elements": {},
+          "relationships": {},
+          "interactive": {
+            "elements": {},
+            "relationships": {}
+          },
+          "assessments": {}
+        },
+        "lastUpdate": "2026-03-03T14:03:38.326Z"
+      },
+      "QuantumCircuitDiagram": {
+        "id": "eb7ea416-54ea-4c38-87f8-9958ca5caf53",
+        "title": "Quantum Circuit",
+        "model": {
+          "cols": [],
+          "gates": [],
+          "gateMetadata": {},
+          "initialStates": [],
+          "version": "1.0.0"
+        },
+        "lastUpdate": "2026-03-03T14:03:38.326Z"
+      }
+    },
+    "settings": {
+      "defaultDiagramType": "ClassDiagram",
+      "autoSave": true,
+      "collaborationEnabled": false
+    }
+  },
+  "exportedAt": "2026-03-12T09:09:04.335Z",
+  "version": "2.0.0"
+}
